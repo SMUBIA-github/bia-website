@@ -1,0 +1,40 @@
+.navbar {
+    background-color: rgba(54, 54, 54, 0.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.063);
+    width: 80%;
+    height: 3rem;
+    padding: 1rem;
+    margin-top: 5rem;
+    display: flex;
+    position: fixed;
+    justify-content: right;
+    align-items: center;
+    border-radius: 20rem;
+  }
+  
+.navcontainer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.NavLink {
+    color: white;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-family: var(--font-inter);
+    font-weight: 200;
+}
+
+.NavLinkContainer {
+    padding-right: 3rem;
+}
+
+.smubia {
+    color: white;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: large;
+    padding-right: 9rem;
+}

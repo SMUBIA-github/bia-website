@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.inter {
+  font-family: var(--font-inter);
+}
