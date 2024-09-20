@@ -1,0 +1,8 @@
+.container{
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    font-family: var(--font-inter);
+}

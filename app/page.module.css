@@ -4,3 +4,36 @@
     width:100vw;
     height: 100vh;
 }
+
+.container{
+    justify-content: center;
+    align-items: center;
+    margin: 10% 10% 10% 10%
+}
+
+.card{
+    font-family: var(--font-roboto-mono);
+    font-style: normal;
+    color: white;
+}
+
+.tagline {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.taglinetext {
+    font-size: 30px;
+    font-weight: light;
+}
+
+.text {
+    font-size: 20px;
+    font-family: var(--font-inter);
+    font-weight: 100;
+}
+
+.breakline {
+    display: block;
+}
+
