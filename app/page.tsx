@@ -19,6 +19,16 @@ export default function Home() {
               We are the premier club for business intelligence & analytics 
               <span className={styles.breakline}>at Singapore Management University </span>
             </span>
+            <Divider />
+            <span className={styles.cardcontainer}>
+              <span>
+                Our Mission
+              </span>
+              <br/>
+              <span>
+                To cultivate a people-centric community that nurtures passion for analytics through opportunities, projects, regardless of prior expertise or background.
+              </span>
+            </span>
           </span>
       </div>
     </div>

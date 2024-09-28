@@ -6,9 +6,15 @@
 }
 
 .container{
+    display: inline-block;
     justify-content: center;
     align-items: center;
     margin: 10% 10% 10% 10%
+}
+
+.cardcontainer {
+    justify-content: center;
+    align-items: center;
 }
 
 .card{

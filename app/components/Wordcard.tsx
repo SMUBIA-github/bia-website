@@ -4,7 +4,7 @@ import styles from './Wordcard.module.css';
 function Wordcard() {
   return (
     <div className={styles.container}>
-    <div className={styles.card}>Wordcard
+    <div className={styles.card}>
     </div>
     </div>
   )
