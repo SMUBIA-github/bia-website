@@ -1,0 +1,11 @@
+.section1{
+    position:absolute;
+    top:12%;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.wordcard{
+    flex: 1 1 200px;
+}
