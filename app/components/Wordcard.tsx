@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Overlay from './Overlay';
 import styles from './Wordcard.module.css';
 
 interface WordCardProps {
@@ -16,7 +17,7 @@ const Wordcard: React.FC<WordCardProps> = ({ title, imageSrc, overlayContent, cl
     setShowOverlay(!showOverlay);
   };
 
-  const handleOverlayClick = () => {
+  const closeOverlay = () => {
     setShowOverlay(false);
   };
 
@@ -27,18 +28,15 @@ const Wordcard: React.FC<WordCardProps> = ({ title, imageSrc, overlayContent, cl
         <h2 className={styles['wordcard-title']}>{title}</h2>
         <button onClick={toggleOverlay} className={styles['wordcard-button']}></button>
       </div>
-      
 
-
-
-      {showOverlay && (
-        <div className={styles['overlay']} onClick={handleOverlayClick}>
-          <div className={styles['overlay-content']} onClick={(e) => e.stopPropagation()}>
-            <span className={styles['close-overlay']} onClick={toggleOverlay}>&times;</span>
-            <p>{overlayContent}</p>
-          </div>
-        </div>
-      )}
+      {/* Overlay Component */}
+      <Overlay
+        isOpen={showOverlay}
+        title={title}
+        imageSrc={imageSrc}
+        content={overlayContent}
+        onClose={closeOverlay}
+      />
     </div>
   );
 };
