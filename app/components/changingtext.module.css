@@ -1,0 +1,35 @@
+.container {
+  padding-top: 1.5rem;
+  min-height: 200px; /* Adjust this value as needed */
+  /* Alternatively, you can use a fixed height, e.g., height: 100px; */
+}
+
+.fade-enter {
+  opacity: 0; /* Initial state for entering */
+}
+
+.fade-enter-active {
+  opacity: 1; /* Final state for entering */
+  transition: opacity 2000ms ease-in; /* Duration for entering */
+}
+
+.fade-exit {
+  opacity: 1; /* Initial state for exiting */
+}
+
+.fade-exit-active {
+  opacity: 0; /* Final state for exiting */
+  transition: opacity 2000ms ease-out; /* Duration for exiting */
+}
+
+.text {
+  font-size: 2rem; /* Font size for the text */
+  font-weight: 800; /* Font weight */
+  background: linear-gradient(
+    to bottom right,
+    #04bdc0 0%,
+    #b3feff 100%
+  ); /* Gradient background */
+  -webkit-background-clip: text; /* Clipping background to text */
+  -webkit-text-fill-color: transparent; /* Fill color for the text */
+}

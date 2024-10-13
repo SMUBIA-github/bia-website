@@ -48,6 +48,7 @@
 }
 
 .missiontext {
+  padding-top: 1rem;
   justify-self: center;
   text-align: center;
   font-weight: 800;

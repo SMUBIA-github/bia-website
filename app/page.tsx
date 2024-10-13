@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Divider from "./components/divider";
+import TextChanger from "./components/changingtext";
 // import Navbar from './components/nav'
 
 export default function Home() {
@@ -38,6 +39,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-2">
             <div className="p-2">
               <span className={styles.maintext}>Our Vision for the future</span>
+              <TextChanger></TextChanger>
               <button className={styles.button} type="button">
                 Find Out More
               </button>
