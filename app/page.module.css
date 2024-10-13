@@ -1,45 +1,73 @@
-
 .background {
-    background-color: black;
-    width:100vw;
-    height: 100vh;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
 }
 
-.container{
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    margin: 10% 10% 10% 10%
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 10% 10% 10%;
 }
 
 .cardcontainer {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensure the text is centered */
+  display: block;
 }
 
-.card{
-    font-family: var(--font-roboto-mono);
-    font-style: normal;
-    color: white;
+.card {
+  font-family: var(--font-roboto-mono);
+  font-style: normal;
+  color: white;
 }
 
 .tagline {
-    font-size: 64px;
-    font-weight: bold;
+  font-size: 64px;
+  font-weight: bold;
 }
 
 .taglinetext {
-    font-size: 30px;
-    font-weight: light;
+  font-size: 30px;
+  font-weight: light;
 }
 
 .text {
-    font-size: 20px;
-    font-family: var(--font-inter);
-    font-weight: 100;
+  font-size: 20px;
+  font-family: var(--font-inter);
+  font-weight: 100;
+}
+
+.maintext {
+  justify-self: center;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.missiontext {
+  justify-self: center;
+  text-align: center;
+  font-weight: 800;
+  font-size: 24px;
+  background: #dab47c;
+  background: linear-gradient(to bottom right, #dab47c 0%, #ffd392 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .breakline {
-    display: block;
+  display: block;
 }
 
+.button {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 20px;
+}
