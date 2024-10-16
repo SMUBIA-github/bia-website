@@ -59,6 +59,17 @@
   -webkit-text-fill-color: transparent;
 }
 
+.reachtext {
+  padding-top: 1rem;
+  justify-self: center;
+  font-weight: 800;
+  font-size: 28px;
+  background: #dab47c;
+  background: linear-gradient(to bottom right, #156567 0%, #29cacd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .breakline {
   display: block;
 }
@@ -71,4 +82,54 @@
   font-size: 24px;
   font-weight: 800;
   margin: 20px;
+}
+
+.image1 {
+  position: absolute;
+  border-radius: 20px;
+  width: 60%;
+  transform: rotateX(25deg) rotateY(-20deg) rotateZ(10deg); /* Rotating in 3D space */
+}
+
+.reachContainer {
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+  position: relative; /* Needed for absolute positioning of the expanded text */
+  cursor: pointer; /* Change cursor to indicate interaction */
+}
+
+.hoverText {
+  font-size: 1.5rem; /* Size of the initial text */
+  color: #ffffff; /* Change color as needed */
+  transition: color 0.3s; /* Transition for color change */
+  background-color: rgba(93, 164, 169, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.expandedText {
+  opacity: 0; /* Hide the expanded text initially */
+  visibility: hidden; /* Prevent interaction when hidden */
+  position: absolute; /* Position the expanded text over the hover text */
+  background-color: rgba(
+    50,
+    234,
+    255,
+    0.7
+  ); /* Background color for visibility */
+  margin-top: 10px;
+  padding: 10px; /* Padding for the expanded text */
+  border-radius: 5px; /* Rounded corners for the expanded text */
+  z-index: 10; /* Ensure it appears above other content */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+  left: -1%; /* Center horizontally */
+}
+
+.reachContainer:hover .expandedText {
+  opacity: 1; /* Show the expanded text on hover */
+  visibility: visible; /* Make it visible */
+}
+
+.reachContainer:hover .hoverText {
+  color: #00bfff; /* Change color on hover */
 }
