@@ -26,7 +26,7 @@ const TextChanger = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.containers}>
       <CSSTransition in={inProp} timeout={2000} classNames={styles}>
         <span className={styles.text}>{texts[index]}</span>
       </CSSTransition>

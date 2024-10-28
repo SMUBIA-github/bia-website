@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google';
-import { Roboto_Mono } from 'next/font/google';
-import "./globals.css";
+import { Inter } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import Navbar from "./components/nav";
 import FooterBar from "./components/footer";
+import SocialDots from "./components/socialmedia";
+import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/Inter.ttf",
@@ -13,16 +16,16 @@ const geistSans = localFont({
 });
 
 const Inter_init = Inter({
-  subsets: ['latin'],
-  weight: ['300'],
-  variable: '--font-inter',
-})
+  subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-inter",
+});
 
 const Roboto_Mono_init = Roboto_Mono({
-  subsets: ['latin'],
-  weight: ['300'],
-  variable: '--font-roboto-mono',
-})
+  subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-roboto-mono",
+});
 
 export const metadata: Metadata = {
   title: "SMUBIA",
@@ -36,13 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${Inter_init.variable} ${Roboto_Mono_init.variable}`}
-      >
+      <body className={`${Inter_init.variable} ${Roboto_Mono_init.variable}`}>
         <Navbar />
         {children}
         <FooterBar />
+        <SocialDots />
       </body>
-    </html> 
+    </html>
   );
 }

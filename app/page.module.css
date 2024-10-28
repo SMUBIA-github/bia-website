@@ -4,11 +4,38 @@
   height: 100vh;
 }
 
-.container {
+.whowearecontainer {
   display: flex;
+  flex-direction: column; /* Change to column for smaller screens */
   justify-content: center;
   align-items: center;
-  margin: 10% 10% 10% 10%;
+  margin: 20vh 10vw; /* Default margin */
+  font-family: var(--font-roboto-mono);
+  font-style: normal;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+/* Adjust margin for larger screens */
+@media (min-width: 1200px) {
+  .whowearecontainer {
+    margin: 15vh 10vw;
+  }
+}
+
+/* Adjust margin for medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .whowearecontainer {
+    margin: 18vh 10vw;
+  }
+}
+
+/* Adjust margin for small screens */
+@media (max-width: 767px) {
+  .whowearecontainer {
+    margin: 10vh 10vw;
+  }
 }
 
 .cardcontainer {
@@ -18,24 +45,18 @@
   display: block;
 }
 
-.card {
-  font-family: var(--font-roboto-mono);
-  font-style: normal;
-  color: white;
-}
-
 .tagline {
-  font-size: 64px;
+  font-size: 6.1vw; /* Responsive font size */
   font-weight: bold;
 }
 
 .taglinetext {
-  font-size: 30px;
+  font-size: 2rem; /* Use rem for responsive sizing */
   font-weight: light;
 }
 
 .text {
-  font-size: 20px;
+  font-size: 1.25rem; /* Use rem for responsive sizing */
   font-family: var(--font-inter);
   font-weight: 100;
 }
@@ -43,7 +64,14 @@
 .maintext {
   justify-self: center;
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+}
+
+.longtext {
+  justify-self: center;
+  text-align: left;
+  font-size: 1.75rem; /* Use rem for responsive sizing */
   font-weight: bold;
 }
 
@@ -52,19 +80,28 @@
   justify-self: center;
   text-align: center;
   font-weight: 800;
-  font-size: 24px;
-  background: #dab47c;
+  font-size: 1.5rem; /* Use rem for responsive sizing */
   background: linear-gradient(to bottom right, #dab47c 0%, #ffd392 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.joinustext {
+  justify-self: center;
+  text-align: center;
+  font-size: 3rem; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+  background: linear-gradient(to right, #04bdc0 0%, #ffd392 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .reachtext {
   padding-top: 1rem;
+  padding-bottom: 0.5rem;
   justify-self: center;
   font-weight: 800;
-  font-size: 28px;
-  background: #dab47c;
+  font-size: 1.75rem; /* Use rem for responsive sizing */
   background: linear-gradient(to bottom right, #156567 0%, #29cacd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -77,17 +114,19 @@
 .button {
   background-color: white;
   color: black;
-  padding: 15px;
+  padding: 1vw; /* Use rem for padding */
   border-radius: 30px;
-  font-size: 24px;
+  font-size: 2vw; /* Use rem for responsive sizing */
+  max-height: 5vw;
+  max-width: 20vw;
   font-weight: 800;
-  margin: 20px;
+  margin: 1.25vw; /* Use rem for margins */
 }
 
 .image1 {
   position: absolute;
   border-radius: 20px;
-  width: 60%;
+  width: 60%; /* Adjust width for responsive design */
   transform: rotateX(25deg) rotateY(-20deg) rotateZ(10deg); /* Rotating in 3D space */
 }
 
@@ -99,7 +138,7 @@
 }
 
 .hoverText {
-  font-size: 1.5rem; /* Size of the initial text */
+  font-size: 2vw; /* Size of the initial text */
   color: #ffffff; /* Change color as needed */
   transition: color 0.3s; /* Transition for color change */
   background-color: rgba(93, 164, 169, 0.7);
@@ -108,6 +147,8 @@
 }
 
 .expandedText {
+  width: 50vw;
+  font-size: 2vw;
   opacity: 0; /* Hide the expanded text initially */
   visibility: hidden; /* Prevent interaction when hidden */
   position: absolute; /* Position the expanded text over the hover text */
@@ -122,7 +163,8 @@
   border-radius: 5px; /* Rounded corners for the expanded text */
   z-index: 10; /* Ensure it appears above other content */
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
-  left: -1%; /* Center horizontally */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust position for perfect centering */
 }
 
 .reachContainer:hover .expandedText {
@@ -132,4 +174,61 @@
 
 .reachContainer:hover .hoverText {
   color: #00bfff; /* Change color on hover */
+}
+
+/* Media Queries for Further Responsiveness */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 8vw; /* Make tagline larger on smaller screens */
+  }
+
+  .button {
+    width: 100%; /* Make button full width */
+  }
+
+  .maintext {
+    font-size: 5vw; /* Adjust main text for smaller screens */
+  }
+
+  .longtext {
+    font-size: 4vw; /* Adjust long text for smaller screens */
+  }
+
+  .missiontext,
+  .joinustext,
+  .reachtext {
+    font-size: 4vw; /* Make mission text and join us text responsive */
+  }
+
+  .text {
+    font-size: 1rem; /* Use rem for responsive sizing */
+    font-family: var(--font-inter);
+    font-weight: 100;
+  }
+}
+
+.responsivewidth {
+  width: 75%; /* Default for larger screens */
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .responsivewidth {
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+.taglinecontainer {
+  margin-bottom: 30vw;
+}
+
+/* GIF background */
+.backgroundContainer {
+  position: fixed; /* Fix the position */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100vw; /* Cover full viewport width */
+  height: 100vh; /* Cover full viewport height */
+  z-index: -1; /* Ensure it’s behind other content */
+  overflow: hidden; /* Prevent overflow */
 }

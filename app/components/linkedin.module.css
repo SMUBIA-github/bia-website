@@ -1,0 +1,35 @@
+.button {
+  background-color: white;
+  color: black;
+  padding: 1rem; /* Changed to rem for consistency */
+  border-radius: 30px;
+  font-size: 2vw; /* Changed to rem */
+  max-height: 5rem; /* Changed to rem */
+  max-width: 20rem; /* Changed to rem */
+  font-weight: 800;
+  margin: 3rem; /* Changed to rem */
+}
+
+.maintext {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Media Query for screen sizes below MD (768px) */
+@media (max-width: 768px) {
+  .button {
+    background-color: white;
+    color: black;
+    padding: 1vw; /* Use rem for padding */
+    border-radius: 30px;
+    font-size: 2vw; /* Use rem for responsive sizing */
+    max-height: 5vw;
+    min-width: 20vw;
+    font-weight: 800;
+    margin: 3vw; /* Use rem for margins */
+  }
+
+  .maintext {
+    font-size: 5vw; /* Adjust font size */
+  }
+}

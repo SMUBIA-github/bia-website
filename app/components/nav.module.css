@@ -1,48 +1,95 @@
 .navbar {
-  background-color: rgba(54, 54, 54, 0.18);
+  background-color: rgba(54, 54, 54, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.063);
   width: 80%;
   height: 3rem;
   padding: 1rem;
   margin-top: 5rem;
-  display: flex;
+  display: flex; /* Set display to flex */
   position: fixed;
-  justify-content: right;
-  align-items: center;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items evenly */
   border-radius: 20rem;
 }
 
 .navcontainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 1000;
 }
 
+.namecontainer {
+}
+
 .NavLink {
-  color: white;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  color: white; /* Ensure the link text is white */
+  text-decoration: none; /* Remove underline */
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-family: var(--font-inter);
   font-weight: 800;
   font-size: 0.8rem;
+  display: block;
+  white-space: nowrap; /* Prevent text from wrapping */
+  transition: color 0.3s; /* Add a transition for hover effect */
+}
+
+.NavLink:hover {
+  color: #ffcc00; /* Change color on hover for better visibility */
 }
 
 .NavLinkContainer {
-  padding-right: 3rem;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the linksContainer to the right */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
 }
 
 .smubia {
-  color: white;
+  display: flex;
+  color: white; /* Ensure the brand text is white */
   font-family: var(--font-inter);
   font-weight: 400;
   font-size: large;
-  padding-right: 9rem;
-  /* font-style: oblique; */
-  /* transform: skewX(35deg); */
 }
 
-/* .smubiacontainer {
-    transform: skewX(35deg);
-} */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+}
+
+.line {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.rotate1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.rotate2 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hide {
+  opacity: 0;
+}
+
+.linksContainer {
+  display: flex; /* Default for larger screens */
+  /* gap: 2rem; */
+}
+
+.customDropdownMenu {
+  background-color: rgba(54, 54, 54, 0.8);
+}

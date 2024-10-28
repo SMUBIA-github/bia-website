@@ -24,7 +24,7 @@ const AlumniTestimonials = () => {
   ];
 
   return (
-    <div className="bg-black text-white p-10">
+    <div className="bg-black text-white">
       <h1 className="text-4xl font-bold mb-4">
         Beyond Singapore Management University
       </h1>

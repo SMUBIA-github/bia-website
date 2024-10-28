@@ -1,0 +1,31 @@
+.image1 {
+  width: 70%;
+}
+
+.plattext {
+  justify-self: center;
+  text-align: center;
+  font-size: 5vw; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+}
+
+.goldtext {
+  justify-self: center;
+  text-align: center;
+  font-size: 4.5vw; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+}
+
+.silvertext {
+  justify-self: center;
+  text-align: center;
+  font-size: 3.5vw; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+}
+
+.bronzetext {
+  justify-self: center;
+  text-align: center;
+  font-size: 2.5vw; /* Use rem or vw for responsive sizing */
+  font-weight: bold;
+}
