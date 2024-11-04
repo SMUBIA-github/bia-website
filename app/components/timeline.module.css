@@ -1,0 +1,48 @@
+.imageContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px; /* Increase height to fit three images comfortably */
+  overflow: hidden; /* Hide scrollbar */
+  position: relative;
+}
+
+.image {
+  width: 80%;
+  transition: transform 0.5s ease, z-index 0.5s ease, opacity 0.5s ease;
+  transform: rotateX(45deg) rotateY(25deg) rotateZ(-30deg);
+  margin: -2rem 0; /* Adjust to create overlap between images */
+  opacity: 0.5;
+}
+
+.currentImage {
+  z-index: 3;
+  transform: scale(1.2) rotateX(45deg) rotateY(25deg) rotateZ(-30deg); /* Ensure orientation is preserved */
+  opacity: 1;
+}
+
+.hiddenImage {
+  z-index: 1;
+  transform: scale(0.9) rotateX(45deg) rotateY(25deg) rotateZ(-30deg);
+  opacity: 0.7;
+}
+
+.timelineContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: black;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: 700px; /* Adjust height as needed */
+}
+
+.eventDetailContainer {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}

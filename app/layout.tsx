@@ -37,11 +37,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={`${Inter_init.variable} ${Roboto_Mono_init.variable}`}>
         <Navbar />
         {children}
+        <div id="portal"></div>
         <FooterBar />
         <SocialDots />
       </body>

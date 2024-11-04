@@ -13,11 +13,13 @@ const Overlay: React.FC<OverlayProps> = ({ isOpen, title, imageSrc, content, onC
   if (!isOpen) return null;
 
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    // Ensure clicking outside the content closes the overlay
+    e.preventDefault();
+    console.log("Overlay clicked:", e.target);
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
+  
 
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>

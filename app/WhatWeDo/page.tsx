@@ -1,6 +1,7 @@
 import React from 'react';
 import Wordcard from '../components/Wordcard';
 import styles from "./WhatWeDo.module.css";
+import Timeline from "../components/Timeline"
 
 const Page: React.FC = () => {
   return (
@@ -41,6 +42,7 @@ const Page: React.FC = () => {
           className={styles.wordcard}
         />
       </div>
+      <Timeline/>
     </div>
   );
 };

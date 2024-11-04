@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Overlay from './Overlay';
+import CustomModal from './CustomModal';
 import styles from './Wordcard.module.css';
 
 interface WordCardProps {
@@ -11,32 +11,24 @@ interface WordCardProps {
 }
 
 const Wordcard: React.FC<WordCardProps> = ({ title, imageSrc, overlayContent, className }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleOverlay = () => {
-    setShowOverlay(!showOverlay);
-  };
-
-  const closeOverlay = () => {
-    setShowOverlay(false);
+  const toggleModal = () => {
+    setIsOpen((prev) => !prev);
   };
 
   return (
     <div className={`${styles['wordcard-container']} ${className}`}>
-      <div className={styles['image-container']}>
+      <div className={styles['image-container']} onClick={toggleModal}>
         <img src={imageSrc} alt={title} className={styles['wordcard-image']} />
         <h2 className={styles['wordcard-title']}>{title}</h2>
-        <button onClick={toggleOverlay} className={styles['wordcard-button']}></button>
       </div>
 
-      {/* Overlay Component */}
-      <Overlay
-        isOpen={showOverlay}
-        title={title}
-        imageSrc={imageSrc}
-        content={overlayContent}
-        onClose={closeOverlay}
-      />
+      <CustomModal open={isOpen} onClose={toggleModal}>
+        <h2>{title}</h2>
+        <img src={imageSrc} alt={title} className={styles.overlayImage} />
+        <p>{overlayContent}</p>
+      </CustomModal>
     </div>
   );
 };

@@ -2,19 +2,20 @@
     position: relative;
     text-align: center;
     /* margin: 20px; */
-    display: inline-block;
+    display: block;
+    /* display: inline-block; */
 }
 
 .image-container {
     position: relative;
-    display: inline-block;
+    display: block;
+    /* display: inline-block; */
 }
 
 .wordcard-image {
     width: 100%;
     max-width: 400px;
     border-radius: 15px;
-    /* Rounded corners */
     display: block;
     margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
