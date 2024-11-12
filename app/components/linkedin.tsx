@@ -21,7 +21,7 @@ const LinkedInSection = () => {
             Learn more about us on LinkedIn
           </span>
           <button className={styles.button} type="button">
-            Connect
+            <a href="https://www.linkedin.com/company/13402601/">Connect</a>
           </button>
         </div>
 
@@ -35,7 +35,7 @@ const LinkedInSection = () => {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <Image
-                  src="/images/photo1.jpg"
+                  src="/images/biapic1.jpg"
                   className="d-block w-100 rounded-lg"
                   alt="LinkedIn Post 1"
                   width={300}
@@ -44,7 +44,16 @@ const LinkedInSection = () => {
               </div>
               <div className="carousel-item">
                 <Image
-                  src="/images/photo2.jpg"
+                  src="/images/biapic3.jpg"
+                  className="d-block w-100 rounded-lg"
+                  alt="LinkedIn Post 2"
+                  width={300}
+                  height={200}
+                />
+              </div>
+              <div className="carousel-item">
+                <Image
+                  src="/images/biapic4.jpg"
                   className="d-block w-100 rounded-lg"
                   alt="LinkedIn Post 2"
                   width={300}

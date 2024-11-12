@@ -52,6 +52,7 @@
 .text {
   font-size: 3vw; /* Font size for the text */
   font-weight: 800; /* Font weight */
+
   background: linear-gradient(
     to bottom right,
     #04bdc0 0%,

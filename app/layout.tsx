@@ -45,7 +45,9 @@ export default function RootLayout({
         {children}
         <div id="portal"></div>
         <FooterBar />
-        <SocialDots />
+        <div className="indexup">
+          <SocialDots />
+        </div>
       </body>
     </html>
   );

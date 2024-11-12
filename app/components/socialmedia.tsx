@@ -29,7 +29,7 @@ const SocialDots = () => {
             <div className="absolute bottom-20 right-0 flex flex-col space-y-3">
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/13402601/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-full flex items-center justify-center transition-transform transform hover:scale-110"
@@ -39,7 +39,7 @@ const SocialDots = () => {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/smu.bia/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-800 p-4 rounded-full flex items-center justify-center transition-transform transform hover:scale-110"
@@ -49,7 +49,7 @@ const SocialDots = () => {
 
               {/* Email */}
               <a
-                href="mailto:someone@example.com"
+                href="mailto:bia@sa.smu.edu.sg"
                 className="bg-gray-800 p-4 rounded-full flex items-center justify-center transition-transform transform hover:scale-110"
               >
                 <FaEnvelope className="text-white" size={24} />

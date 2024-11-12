@@ -1,77 +1,79 @@
 .page-container {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--font-inter);
 }
 
 /* Container for the cat image and text */
 .section1 {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 80px; /* Add space below the navbar */
-    z-index: 1; /* Keep it above background */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 80px; /* Add space below the navbar */
+  z-index: 1; /* Keep it above background */
+  font-family: var(--font-inter);
 }
 
 /* Cat image positioned on the left */
 .catimg-container {
-    position: relative;
-    z-index: 1;
-    width: 66vw; /* 2/3 of the viewport width */
-    height: auto;
+  position: relative;
+  z-index: 1;
+  width: 66vw; /* 2/3 of the viewport width */
+  height: auto;
 }
 
 .catimg {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Text on the right side of the cat image */
 .text-container {
-    position: relative;
-    flex: 1;
-    padding-top: 20%;
-    max-width: 400px;
-    margin-left: 20px;
+  position: relative;
+  flex: 1;
+  padding-top: 20%;
+  max-width: 400px;
+  margin-left: 20px;
+  font-family: var(--font-inter);
 }
 
 .header {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
-    margin-bottom: 20px;
+  font-family: var(--font-inter);
+  font-size: xx-large;
+  margin-bottom: 20px;
 }
 
 .para-text {
-    font-size: medium;
-    max-width: 300px;
-    line-height: 1.6;
-    margin: 0 auto;
+  font-size: medium;
+  max-width: 300px;
+  line-height: 1.6;
+  margin: 0 auto;
 }
 
 /* Wordcards positioned lower, overlapping the cat */
 .section1-cards {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Small gap between the cards */
-    padding: 20px;
-    z-index: 2; /* Keep above the cat image */
-    margin-top: -100px; /* Move cards up to cover 10% of the cat image */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Small gap between the cards */
+  padding: 20px;
+  z-index: 2; /* Keep above the cat image */
+  margin-top: -100px; /* Move cards up to cover 10% of the cat image */
 }
 
 .wordcard {
-    flex: 1;
-    max-width: 30%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  flex: 1;
+  max-width: 30%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
 .wordcard:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.section2{
-    
+.section2 {
 }

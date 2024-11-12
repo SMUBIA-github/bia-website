@@ -49,7 +49,11 @@ const Navbar = () => {
                   <Link href="/WhatWeDo" className={styles.NavLink}>
                     What we do
                   </Link>
-                  <Link href="/Datathon" className={styles.NavLink}>
+                  <Link
+                    href="https://hackathon-ltic0wu89-ceewaigithubs-projects.vercel.app/"
+                    target="_blank"
+                    className={styles.NavLink}
+                  >
                     Datathon
                   </Link>
                   <Link href="/Merchandise" className={styles.NavLink}>
