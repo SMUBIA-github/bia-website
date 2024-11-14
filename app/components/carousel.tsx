@@ -4,10 +4,10 @@ import styles from "./carousel.module.css"; // Import your CSS module for any cu
 const AlumniTestimonials = () => {
   const testimonials = [
     {
-      name: "Brijesh",
-      title: "Head of Intel",
-      text: "I had a great time in SMUBIA. Work day and night... it was amazing... Wow... I gained a lot of experience...",
-      imgSrc: "/images/photo1.jpg", // Replace with actual image paths
+      name: "Jowett",
+      title: "Cloud Native Architect (Dell Technologies)",
+      text: "SMU's Business Intelligence & Analytics program provided me with hands-on experience in data science while connecting me to a vibrant community of data professionals and industry experts",
+      imgSrc: "/images/jowett.jpg", // Replace with actual image paths
     },
     {
       name: "Brijesh",
