@@ -6,6 +6,7 @@ import Navbar from "./components/nav";
 import FooterBar from "./components/footer";
 import SocialDots from "./components/socialmedia";
 import Image from "next/image";
+import LoadingScreen from "./components/LoadingScreen";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 
@@ -37,10 +38,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <body className={`${Inter_init.variable} ${Roboto_Mono_init.variable}`}>
+        <LoadingScreen />
         <Navbar />
         {children}
         <div id="portal"></div>
