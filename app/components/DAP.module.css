@@ -1,0 +1,100 @@
+.container {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+  }
+  
+  .headerSection {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    color: #888;
+    margin-bottom: 2rem;
+  }
+  
+  .description, 
+  .additionalInfo {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .slideDeckButton {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .slideDeckButton:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Matching the original wordcard section styling */
+  .cardsSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .programCard {
+    flex: 1;
+    max-width: 30%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .programCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .highlightsSection {
+    padding: 4rem 2rem;
+  }
+  
+  .highlightsTitle {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .projectsGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .projectItem {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .projectItem:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .projectImage {
+    flex: 1;
+    aspect-ratio: 4/3;
+    background: #333;
+    border-radius: 1rem;
+  }
+  
+  .projectDescription {
+    flex: 1;
+  }

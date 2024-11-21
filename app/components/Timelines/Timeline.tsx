@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './timeline.module.css';
-import EventCard from './EventCard';
+import EventCard from '../EventCard';
 
 interface Event {
   title: string;

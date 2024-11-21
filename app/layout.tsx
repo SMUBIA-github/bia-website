@@ -6,7 +6,8 @@ import Navbar from "./components/nav";
 import FooterBar from "./components/footer";
 import SocialDots from "./components/socialmedia";
 import Image from "next/image";
-import LoadingScreen from "./components/LoadingScreen";
+// import LoadingScreen from "./components/LoadingScreen";
+import LoadingScreen from "./components/loadingscreen";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 

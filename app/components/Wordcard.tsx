@@ -24,11 +24,13 @@ const Wordcard: React.FC<WordCardProps> = ({ title, imageSrc, overlayContent, cl
         <h2 className={styles['wordcard-title']}>{title}</h2>
       </div>
 
-      <CustomModal open={isOpen} onClose={toggleModal}>
-        <h2>{title}</h2>
-        <img src={imageSrc} alt={title} className={styles.overlayImage} />
-        <p>{overlayContent}</p>
-      </CustomModal>
+      <CustomModal 
+        isOpen={isOpen} 
+        onClose={toggleModal}
+        title={title} 
+        imageSrc={imageSrc} 
+        overlayContent={overlayContent}
+      />
     </div>
   );
 };

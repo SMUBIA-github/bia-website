@@ -1,7 +1,10 @@
 import React from 'react';
 import Wordcard from '../components/Wordcard';
 import styles from "./WhatWeDo.module.css";
-import Timeline from "../components/Timeline"
+import Timeline from "../components/Timelines/Timeline"
+import Timeline2 from '../components/Timelines/Timeline2';
+import DAP from '../components/DAP'
+import TimelineMain from '../components/Timelines/TimelineMain';
 
 const Page: React.FC = () => {
   return (
@@ -43,6 +46,9 @@ const Page: React.FC = () => {
         />
       </div>
       <Timeline/>
+      <Timeline2/>
+      <TimelineMain/>
+      <DAP/>
     </div>
   );
 };
