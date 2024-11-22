@@ -1,13 +1,17 @@
 // TimelineMobile.tsx
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
+import { EffectCards, Controller } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import styles from './timeline2.module.css';
 
 const TimelineMobile = ({ events }) => {
+  const [firstSwiper, setFirstSwiper] = useState<SwiperType | null>(null);
+  const [secondSwiper, setSecondSwiper] = useState<SwiperType | null>(null);
+
   return (
     <div className={styles.mobileContainer}>
       <h1 className={styles.timelineHeader}>Timeline</h1>
@@ -16,8 +20,16 @@ const TimelineMobile = ({ events }) => {
         <Swiper
           effect={'cards'}
           grabCursor={true}
-          modules={[EffectCards]}
+          modules={[EffectCards, Controller]}
           className={styles.swiper}
+          onSwiper={setFirstSwiper}
+          controller={{ control: secondSwiper }}
+          cardsEffect={{
+            perSlideOffset: 8,
+            perSlideRotate: 2,
+            rotate: true,
+            slideShadows: true,
+          }}
         >
           {events.map((event, index) => (
             <SwiperSlide key={index} className={styles.swiperSlide}>
@@ -29,11 +41,11 @@ const TimelineMobile = ({ events }) => {
 
       <div className={styles.mobileContent}>
         <Swiper
+          modules={[Controller]}
+          onSwiper={setSecondSwiper}
+          controller={{ control: firstSwiper }}
           className={styles.textSwiper}
           slidesPerView={1}
-          onSlideChange={(swiper) => {
-            // You can sync this with the card swiper if needed
-          }}
         >
           {events.map((event, index) => (
             <SwiperSlide key={index}>
@@ -54,5 +66,4 @@ const TimelineMobile = ({ events }) => {
   );
 };
 
-// Export the component
 export default TimelineMobile;

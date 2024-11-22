@@ -45,8 +45,8 @@ const Page: React.FC = () => {
           className={styles.wordcard}
         />
       </div>
-      <Timeline/>
-      <Timeline2/>
+      {/* <Timeline/> */}
+      {/* <Timeline2/> */}
       <TimelineMain/>
       <DAP/>
     </div>
