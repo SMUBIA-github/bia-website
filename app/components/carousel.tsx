@@ -5,15 +5,15 @@ const AlumniTestimonials = () => {
   const testimonials = [
     {
       name: "Jowett",
-      title: "Cloud Native Architect (Dell Technologies)",
-      text: "SMU's Business Intelligence & Analytics program provided me with hands-on experience in data science while connecting me to a vibrant community of data professionals and industry experts",
+      title: "Cloud Native Architect",
+      text: "SMU's Business Intelligence & Analytics program provided me with hands-on experience in data science while connecting me to a vibrant community of data professionals and industry experts.",
       imgSrc: "/images/jowett.jpg", // Replace with actual image paths
     },
     {
-      name: "Brijesh",
-      title: "Head of Intel",
-      text: "I had a great time in SMUBIA. Work day and night... it was amazing... Wow... I gained a lot of experience...",
-      imgSrc: "/images/photo1.jpg",
+      name: "Gigi Teo",
+      title: "ML Quant",
+      text: "BIA's DAP programme is a wonderful learning opportunity for members, with guidance from industry experts and seniors to work on projects that 'get their hands dirty with data and ML'.",
+      imgSrc: "/images/gigi3.jpg",
     },
     {
       name: "Brijesh",
