@@ -28,14 +28,16 @@ const Navbar = () => {
             {" "}
             {/* Bootstrap row */}
             <div className="col-4">
-              <div className={styles.namecontainer}>
-                <Image
-                  src="/images/logo.png"
-                  alt="Description of the image"
-                  width={100}
-                  height={32}
-                />
-              </div>
+              <Link href="./">
+                <div className={styles.namecontainer}>
+                  <Image
+                    src="/images/logo.png"
+                    alt="Description of the image"
+                    width={100}
+                    height={32}
+                  />
+                </div>
+              </Link>
             </div>
             <div className="col-8 d-flex justify-content-end">
               {" "}
