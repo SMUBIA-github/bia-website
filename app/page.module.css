@@ -87,13 +87,34 @@
 }
 
 .joinustext {
-  justify-self: center;
-  text-align: center;
-  font-size: 3rem; /* Use rem or vw for responsive sizing */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
-  background: linear-gradient(to right, #04bdc0 0%, #ffd392 100%);
+  text-align: center;
+  background: linear-gradient(to right, #04bdc0 0%, #ffd392 50%, #04bdc0 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.8s ease;
+  animation: shine 3s linear infinite;
+}
+
+.joinustext:hover {
+  background: linear-gradient(
+    to right,
+    #ffd392 0%,
+    #04bdc0 100%
+  ); /* Reversed gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(1.05); /* Optional: adds a slight scale effect */
+  background-position: right center; /* Move gradient position */
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .reachtext {
@@ -111,16 +132,40 @@
   display: block;
 }
 
+.buttoncontainer {
+  max-width: 20rem;
+  margin: 0 auto; /* Centers horizontally */
+  display: flex; /* For better button alignment */
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   background-color: white;
   color: black;
-  padding: 1vw; /* Use rem for padding */
+  padding: clamp(0.7rem, 1.5vw, 1.5rem);
   border-radius: 30px;
-  font-size: 2vw; /* Use rem for responsive sizing */
-  max-height: 5vw;
-  max-width: 20vw;
+  font-size: clamp(0.7rem, 2vw, 2rem);
+  max-height: 10rem;
+  max-width: 20rem;
+  min-height: 1rem;
+  min-width: 7rem;
   font-weight: 800;
-  margin: 1.25vw; /* Use rem for margins */
+  margin: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover state for better interactivity */
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Active state for click feedback */
+.button:active {
+  transform: scale(0.95);
 }
 
 .image1 {
@@ -187,7 +232,11 @@
 /* Media Queries for Further Responsiveness */
 @media (max-width: 768px) {
   .tagline {
-    font-size: 8vw; /* Make tagline larger on smaller screens */
+    font-size: clamp(
+      2rem,
+      8vw,
+      4rem
+    ); /* Make tagline larger on smaller screens */
   }
 
   .button {
@@ -203,7 +252,6 @@
   }
 
   .missiontext,
-  .joinustext,
   .reachtext {
     font-size: 4vw; /* Make mission text and join us text responsive */
   }
@@ -227,7 +275,8 @@
 }
 
 .taglinecontainer {
-  margin-bottom: 30vw;
+  margin-bottom: clamp(2rem, 20vw, 12rem);
+  margin-top: 1rem;
 }
 
 /* GIF background */

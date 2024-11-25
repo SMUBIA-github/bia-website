@@ -16,13 +16,17 @@ const LinkedInSection = () => {
     <div className="bg-black text-white flex justify-center items-center">
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Left Section */}
-        <div className="flex flex-col md:w-1/2 w-full md:pr-6 items-center text-center md:text-left">
-          <span className={`${styles.maintext} font-bold mb-0 md:mb-4`}>
-            Learn more about us on LinkedIn
-          </span>
-          <button className={styles.button} type="button">
-            <a href="https://www.linkedin.com/company/13402601/">Connect</a>
-          </button>
+        <div className="flex flex-col items-center justify-center w-full md:w-1/2 min-h-[200px] p-4">
+          <div className={styles.linkcontainer}>
+            <a
+              href="https://www.linkedin.com/company/13402601/"
+              className={styles.gradientlink}
+            >
+              <span className={styles.gradienttext}>
+                Learn more about us on LinkedIn
+              </span>
+            </a>
+          </div>
         </div>
 
         {/* Right Section (Carousel) */}

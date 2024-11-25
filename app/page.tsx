@@ -179,26 +179,16 @@ export default function Home() {
 
           <ScrollReveal>
             <div className="relative flex flex-col md:flex-row p-2">
-              <div className="text-container w-full md:w-1/2 relative z-10 md:pe-5 text-justify md:text-left">
+              <div className="text-container w-full mb-11 md:mb-0 md:w-1/2 relative z-10 md:pe-5 text-justify md:text-left">
                 <span className={styles.longtext}>
                   SMUBIA was established in 2015 by just a few enthusiasts.
                   Today, we have evolved into a large and thriving community.
                 </span>
               </div>
-              <div className="image-container w-full md:w-1/2 grid grid-rows-2 gap-2 mt-4 md:mt-0 text-center">
-                <div className="bluebrown">
+              <div className="image-container w-full md:w-1/2 grid place-items-center text-center md:mb-0 mb-3">
+                <Link href="/ContactUs">
                   <span className={styles.joinustext}>Join Us Today.</span>
-                </div>
-                <div className="flex justify-center gap-2 mt-2">
-                  {/* <button className={styles.button} type="button">
-                  Find Out More
-                </button> */}
-                  <button className={styles.button} type="button">
-                    <Link href="/ContactUs" className={styles.NavLink}>
-                      Contact Us
-                    </Link>
-                  </button>
-                </div>
+                </Link>
               </div>
             </div>
           </ScrollReveal>

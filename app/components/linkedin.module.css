@@ -1,35 +1,105 @@
 .button {
   background-color: white;
   color: black;
-  padding: 1rem; /* Changed to rem for consistency */
+  padding: clamp(0.7rem, 1.5vw, 1.5rem);
   border-radius: 30px;
-  font-size: 2vw; /* Changed to rem */
-  max-height: 5rem; /* Changed to rem */
-  max-width: 20rem; /* Changed to rem */
+  font-size: clamp(0.7rem, 2vw, 2rem);
+  max-height: 10rem;
+  max-width: 20rem;
+  min-height: 1rem;
+  min-width: 7rem;
   font-weight: 800;
-  margin: 3rem; /* Changed to rem */
+  margin: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.maintext {
-  font-size: 2.5em;
-  font-weight: bold;
+/* Hover state for better interactivity */
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
-/* Media Query for screen sizes below MD (768px) */
-@media (max-width: 768px) {
-  .button {
-    background-color: white;
-    color: black;
-    padding: 1vw; /* Use rem for padding */
-    border-radius: 30px;
-    font-size: 2vw; /* Use rem for responsive sizing */
-    max-height: 5vw;
-    min-width: 20vw;
-    font-weight: 800;
-    margin: 3vw; /* Use rem for margins */
+/* Active state for click feedback */
+.button:active {
+  transform: scale(0.95);
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .link-container {
+    width: 50%;
   }
+}
 
-  .maintext {
-    font-size: 5vw; /* Adjust font size */
+.gradientlink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gradientlink:hover {
+  transform: scale(1.05);
+}
+
+.gradienttext {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #04bdc0 0%,
+    #ffd392 50%,
+    #ffde69 70%,
+    #04bdc0 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.8s ease;
+  animation: shine 3s linear infinite;
+}
+
+.gradientlink:hover .gradienttext {
+  background-position: right center;
+}
+
+/* Shine effect */
+.gradientlink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-12deg);
+  transition: none;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
