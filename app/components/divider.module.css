@@ -7,19 +7,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0;
-}
-
-@media (max-width: 768px) {
-  /* For tablets and smaller screens */
-  .container {
-    margin: 3rem 0;
-  }
-}
-
-@media (max-width: 576px) {
-  /* For mobile screens */
-  .container {
-    margin: 1.5rem 0;
-  }
+  margin: clamp(3rem, 6vw + 2rem, 13rem) 0;
 }
