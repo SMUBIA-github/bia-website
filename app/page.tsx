@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Divider from "./components/divider";
 import TextChanger from "./components/changingtext";
 import AlumniTestimonials from "./components/carousel";
-import Sponsor from "./components/sponsor";
+// import Sponsor from "./components/sponsor";
 import LinkedInSection from "./components/linkedin";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";

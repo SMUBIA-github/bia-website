@@ -2,7 +2,7 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import EventCard from '../EventCard';
+// import EventCard from '../EventCard';
 import styles from './timeline2.module.css';
 
 const Timeline2 = () => {

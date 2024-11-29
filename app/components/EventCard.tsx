@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './eventCard.module.css';
+// import styles from './eventCard.module.css';
 
 interface Event {
   title: string;

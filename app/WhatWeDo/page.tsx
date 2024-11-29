@@ -1,8 +1,8 @@
 import React from 'react';
 import Wordcard from '../components/Wordcard';
 import styles from "./WhatWeDo.module.css";
-import Timeline from "../components/Timelines/Timeline"
-import Timeline2 from '../components/Timelines/Timeline2';
+// import Timeline from "../components/Timelines/Timeline"
+// import Timeline2 from '../components/Timelines/Timeline2';
 import DAP from '../components/DAP'
 import TimelineMain from '../components/Timelines/TimelineMain';
 

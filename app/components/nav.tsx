@@ -8,11 +8,13 @@ import {
   Dropdown,
   DropdownTrigger,
   DropdownMenu,
-  DropdownSection,
+  // DropdownSection, commented out for now since not used
   DropdownItem,
 } from "@nextui-org/dropdown";
 
-import { Button, ButtonGroup } from "@nextui-org/button";
+import { Button, 
+  // ButtonGroup 
+} from "@nextui-org/button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
