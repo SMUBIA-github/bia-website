@@ -2,15 +2,23 @@
   background-color: rgba(54, 54, 54, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.063);
-  width: 80%;
-  height: 3rem;
-  padding: 1rem;
-  margin-top: 5rem;
-  display: flex; /* Set display to flex */
+  width: clamp(80%, 85%, 90%);
+  height: clamp(3rem, 4vw, 5rem);
+  padding: clamp(1.2rem, 2vw, 4rem);
+  margin-top: clamp(3rem, 5vw + 3rem, 15rem);
+  display: flex;
   position: fixed;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Distribute items evenly */
-  border-radius: 20rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: clamp(20rem, 25vw, 30rem);
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    width: 80%;
+    height: 2rem;
+    padding: 3rem;
+  }
 }
 
 .navcontainer {
@@ -23,21 +31,25 @@
 .namecontainer {
 }
 
+.image1 {
+  width: "auto";
+  height: clamp("24px", "3vw", "32px");
+}
+
 .NavLink {
-  color: white; /* Ensure the link text is white */
-  text-decoration: none; /* Remove underline */
-  margin-left: 2rem;
-  margin-right: 2rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 clamp(1rem, 2vw + 1rem, 3rem);
   font-family: var(--font-inter);
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 1vw, 4rem);
   display: block;
-  white-space: nowrap; /* Prevent text from wrapping */
-  transition: color 0.3s; /* Add a transition for hover effect */
+  white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .NavLink:hover {
-  color: #ffcc00; /* Change color on hover for better visibility */
+  color: #ffcc00;
 }
 
 .NavLinkContainer {

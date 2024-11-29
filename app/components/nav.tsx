@@ -12,8 +12,9 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 
-import { Button, 
-  // ButtonGroup 
+import {
+  Button,
+  // ButtonGroup
 } from "@nextui-org/button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,8 +36,10 @@ const Navbar = () => {
                   <Image
                     src="/images/logo.png"
                     alt="Description of the image"
-                    width={100}
-                    height={32}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "45%", height: "auto", minWidth: "100px" }}
                   />
                 </div>
               </Link>
