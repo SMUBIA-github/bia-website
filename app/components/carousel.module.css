@@ -1,0 +1,46 @@
+.maintext {
+  justify-self: center;
+  font-size: clamp(1.5rem, 1rem + 3vw, 5rem);
+  font-weight: bold;
+}
+
+.secondtext {
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: clamp(0.9rem, 0.7rem + 1vw, 2rem);
+  font-family: var(--font-inter);
+  font-weight: 100;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.testimonialcontainer {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 73%;
+}
+
+.testimonialtext {
+  flex: 1;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
+}
+
+.testimonialfooter {
+  margin-top: auto;
+}
+
+.testimonialname {
+  font-size: clamp(1rem, 1vw, 1.4rem);
+}
+
+.testimonialtitle {
+  color: rgb(156 163 175);
+  font-size: clamp(1rem, 1vw, 1.4rem);
+  margin-bottom: 1rem;
+}

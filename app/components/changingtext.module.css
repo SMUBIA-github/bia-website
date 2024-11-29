@@ -1,34 +1,6 @@
 .containers {
   padding-top: 1.5rem;
-  min-height: 7rem; /* Default for smallest screens */
-}
-
-@media (min-width: 576px) {
-  /* Small screens */
-  .containers {
-    min-height: 9rem;
-  }
-}
-
-@media (min-width: 768px) {
-  /* Medium screens */
-  .containers {
-    min-height: 11rem;
-  }
-}
-
-@media (min-width: 992px) {
-  /* Large screens */
-  .containers {
-    min-height: 12rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* Extra large screens */
-  .containers {
-    min-height: 14rem;
-  }
+  min-height: clamp(7rem, 5vw + 6rem, 15rem);
 }
 
 .fade-enter {
@@ -50,7 +22,7 @@
 }
 
 .text {
-  font-size: 3vw; /* Font size for the text */
+  font-size: clamp(1rem, 2.5vw, 3rem); /* Use clamp for responsive sizing */
   font-weight: 800; /* Font weight */
 
   background: linear-gradient(

@@ -171,8 +171,9 @@ export default function Home() {
                   className={styles.image1}
                   src="/images/biapic2.jpg"
                   alt="Photo 1"
-                  width={500}
-                  height={300}
+                  width={300}
+                  height={200}
+                  layout="intrinsic"
                 />
               </div>
             </div>
