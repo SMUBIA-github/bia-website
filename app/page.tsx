@@ -53,7 +53,7 @@ export default function Home() {
     <main>
       <div className={styles.backgroundGifContainer}>
         <Image
-          src="/BIABG4.gif"
+          src="/images/biabg4.gif"
           alt="Background GIF"
           layout="fill"
           objectFit="cover"
@@ -119,7 +119,7 @@ export default function Home() {
                   </button>
                   <button className={styles.button} type="button">
                     <a
-                      href="/SMUBIA.Prospectus.pdf" // Ensure this file is placed in the public/files folder
+                      href="/images/prospectus.pdf" // Ensure this file is placed in the public/files folder
                       download
                       className={styles.link}
                     >
