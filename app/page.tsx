@@ -52,12 +52,17 @@ export default function Home() {
   return (
     <main>
       <div className={styles.backgroundGifContainer}>
-        <Image
-          src="/images/biabg4.gif"
+        <img
+          src="images/biabg4.gif"
           alt="Background GIF"
-          layout="fill"
-          objectFit="cover"
-          priority
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
         />
         {/* <video
           autoPlay
