@@ -4,7 +4,15 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './timeline2.module.css';
 
-const TimelineDesktop = ({ events }) => {
+// Define the Event type
+interface Event {
+  imageUrl: string;
+  title: string;
+  description: string;
+  futureEvent?: boolean; // optional field
+}
+
+const TimelineDesktop = ({ events }: { events: Event[] }) => {  // Type events prop
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);

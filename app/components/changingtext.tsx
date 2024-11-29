@@ -1,5 +1,5 @@
 "use client"; // Add this at the top
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";  // Import useMemo
 import { CSSTransition } from "react-transition-group";
 import styles from "./changingtext.module.css"; // Import CSS for transition styles
 
@@ -7,11 +7,12 @@ const TextChanger = () => {
   const [index, setIndex] = useState(0);
   const [inProp, setInProp] = useState(true);
 
-  const texts = [
+  // Memoize the texts array to prevent unnecessary re-creations on every render
+  const texts = useMemo(() => [
     "Empowering individuals from all backgrounds",
     "Creating innovation and excellence in every project and partnership",
     "To be a leading platform for business intelligence and data analytics",
-  ];
+  ], []); // Empty array ensures it is only created once
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +24,7 @@ const TextChanger = () => {
     }, 5000); // Change every 5 seconds
 
     return () => clearInterval(interval); // Clean up interval on unmount
-  }, []);
+  }, [texts]);  // Keep texts as a dependency
 
   return (
     <div className={styles.containers}>

@@ -8,7 +8,15 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import styles from './timeline2.module.css';
 
-const TimelineMobile = ({ events }) => {
+// Define the Event type
+interface Event {
+  imageUrl: string;
+  title: string;
+  description: string;
+  futureEvent?: boolean; // optional field
+}
+
+const TimelineMobile = ({ events }: { events: Event[] }) => {  // Type events prop
   const [firstSwiper, setFirstSwiper] = useState<SwiperType | null>(null);
   const [secondSwiper, setSecondSwiper] = useState<SwiperType | null>(null);
 

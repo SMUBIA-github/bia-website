@@ -1,6 +1,7 @@
 import React from 'react';
 import Wordcard from './Wordcard';
 import styles from './DAP.module.css';
+import Image from 'next/image';
 
 const DAP: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const DAP: React.FC = () => {
       {/* Header Section */}
       <div className={styles.headerSection}>
         <h1 className={styles.title}>Data Associates Programme</h1>
-        <p className={styles.subtitle}>SMU BIA's flagship academic programme</p>
+        <p className={styles.subtitle}>SMU BIA&apos;s flagship academic programme</p>
         <p className={styles.description}>
           DAP is a project-oriented learning programme where mentees can learn through self-initiated 
           projects in small groups and weekly theory sessions in tandem.
@@ -49,9 +50,9 @@ const DAP: React.FC = () => {
         <h2 className={styles.highlightsTitle}>Highlights from the 10th DAP</h2>
         <div className={styles.projectsGrid}>
           <div className={styles.projectItem}>
-            <div className={styles.projectImage}>
-              PROJECT PICTURE?
-            </div>
+          <div className={styles.projectImage}>
+            <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
+          </div>
             <div className={styles.projectDescription}>
               Project Description
             </div>
@@ -61,8 +62,8 @@ const DAP: React.FC = () => {
               Project Description
             </div>
             <div className={styles.projectImage}>
-              PROJECT PICTURE?
-            </div>
+            <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
+          </div>
           </div>
         </div>
       </div>

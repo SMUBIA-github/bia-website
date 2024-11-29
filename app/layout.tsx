@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 import Navbar from "./components/nav";
 import FooterBar from "./components/footer";
 import SocialDots from "./components/socialmedia";
-import Image from "next/image";
+// import Image from "next/image";
 // import LoadingScreen from "./components/LoadingScreen";
 import LoadingScreen from "./components/loadingscreen";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/Inter.ttf",
-  variable: "--font-inter",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/Inter.ttf",
+//   variable: "--font-inter",
+//   weight: "100 900",
+// });
 
 const Inter_init = Inter({
   subsets: ["latin"],

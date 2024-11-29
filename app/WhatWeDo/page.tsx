@@ -1,6 +1,7 @@
 import React from 'react';
 import Wordcard from '../components/Wordcard';
 import styles from "./WhatWeDo.module.css";
+import Image from "next/image";
 // import Timeline from "../components/Timelines/Timeline"
 // import Timeline2 from '../components/Timelines/Timeline2';
 import DAP from '../components/DAP'
@@ -11,15 +12,16 @@ const Page: React.FC = () => {
     <div className={styles['page-container']}>
       {/* Section 1: Cat image and Text */}
       <div className={styles['section1']}>
-        <div className={styles['catimg-container']}>
-          <img src='/images/BIAMASCOT.png' alt="BIAMascot" className={styles.catimg} />
-        </div>
+      <div className={styles['catimg-container']}>
+        <Image src='/images/BIAMASCOT.png' alt="BIAMascot" className={styles.catimg} width={500} height={500} />
+      </div>
         <div className={styles['text-container']}>
           <div className={styles.header}>
             <h1>Workshops</h1>
           </div>
           <div className={styles['para-text']}>
-            <p>This academic year, we're offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
+          <p>This academic year, we&apos;re offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
+
           </div>
         </div>
       </div>

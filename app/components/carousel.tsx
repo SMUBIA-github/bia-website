@@ -1,5 +1,5 @@
 import Image from "next/image"; // Assuming you're using Next.js for image optimization
-import styles from "./carousel.module.css"; // Import your CSS module for any custom styles
+// import styles from "./carousel.module.css"; // Import your CSS module for any custom styles
 
 const AlumniTestimonials = () => {
   const testimonials = [

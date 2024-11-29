@@ -7,11 +7,16 @@ import AlumniTestimonials from "./components/carousel";
 // import Sponsor from "./components/sponsor";
 import LinkedInSection from "./components/linkedin";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
 
-const ScrollReveal = ({ children, threshold = 0.1 }) => {
+interface ScrollRevealProps {
+  children: ReactNode;
+  threshold?: number;
+}
+
+const ScrollReveal = ({ children, threshold = 0.1 }: ScrollRevealProps) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [ref, setRef] = useState(null);
+  const [ref, setRef] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!ref) return;
@@ -73,7 +78,8 @@ export default function Home() {
               <br /> & Analytics Club
             </span>
             <span className={styles.taglinetext}>
-              <nbsp></nbsp> est.2015 <br />
+              {/* <nbsp></nbsp> est.2015 <br /> Replaced this w below */}
+              {" "}est.2015 <br />
               <div className={styles.responsivewidth}>
                 <span className={styles.text}>
                   We are the premier club for business intelligence & analytics
