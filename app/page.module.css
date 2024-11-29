@@ -168,7 +168,7 @@
 
 .reachContainer {
   margin-top: 1rem;
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
   position: relative; /* Needed for absolute positioning of the expanded text */
   cursor: pointer; /* Change cursor to indicate interaction */
 }
@@ -200,7 +200,7 @@
   z-index: 10; /* Ensure it appears above other content */
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
   left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust position for perfect centering */
+  transform: translateX(-34%); /* Adjust position for perfect centering */
 }
 
 .reachContainer:hover .expandedText {

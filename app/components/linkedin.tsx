@@ -13,7 +13,7 @@ const LinkedInSection = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white flex justify-center items-center">
+    <div className="text-white flex justify-center items-center">
       <div className="container mx-auto flex flex-col md:flex-row">
         {/* Left Section */}
         <div className="flex flex-col items-center justify-center w-full md:w-1/2 min-h-[200px] p-4">
