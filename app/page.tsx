@@ -53,7 +53,7 @@ export default function Home() {
     <main>
       <div className={styles.backgroundGifContainer}>
         <img
-          src="images/biabg4.gif"
+          src="/biabg4.gif"
           alt="Background GIF"
           style={{
             position: "absolute",
