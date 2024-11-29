@@ -9,7 +9,7 @@
   flex-direction: row; /* Revert to row */
   justify-content: center;
   align-items: center;
-  margin: 15vh 10vw; /* Default margin */
+  margin: 15vh 15vw; /* Default margin */
   font-family: var(--font-roboto-mono);
   font-style: normal;
   color: white;
