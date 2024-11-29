@@ -53,7 +53,7 @@ export default function Home() {
     <main>
       <div className={styles.backgroundGifContainer}>
         <Image
-          src="/images/BIABG4.gif"
+          src="/BIABG4.gif"
           alt="Background GIF"
           layout="fill"
           objectFit="cover"
@@ -78,8 +78,8 @@ export default function Home() {
               <br /> & Analytics Club
             </span>
             <span className={styles.taglinetext}>
-              {/* <nbsp></nbsp> est.2015 <br /> Replaced this w below */}
-              {" "}est.2015 <br />
+              {/* <nbsp></nbsp> est.2015 <br /> Replaced this w below */}{" "}
+              est.2015 <br />
               <div className={styles.responsivewidth}>
                 <span className={styles.text}>
                   We are the premier club for business intelligence & analytics
@@ -119,7 +119,7 @@ export default function Home() {
                   </button>
                   <button className={styles.button} type="button">
                     <a
-                      href="/files/SMUBIA.Prospectus.pdf" // Ensure this file is placed in the public/files folder
+                      href="/SMUBIA.Prospectus.pdf" // Ensure this file is placed in the public/files folder
                       download
                       className={styles.link}
                     >
