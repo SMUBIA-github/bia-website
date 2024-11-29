@@ -2,7 +2,7 @@
   background-color: rgba(54, 54, 54, 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.063);
-  width: clamp(80%, 85%, 90%);
+  width: 80%;
   height: clamp(3rem, 4vw, 5rem);
   padding: clamp(1.2rem, 2vw, 4rem);
   margin-top: clamp(3rem, 5vw + 3rem, 15rem);
@@ -15,9 +15,9 @@
 
 @media (min-width: 1440px) {
   .navbar {
-    width: 80%;
-    height: 2rem;
-    padding: 3rem;
+    height: 1rem;
+    padding: 2.5rem;
+    width: 70%;
   }
 }
 
@@ -28,21 +28,13 @@
   z-index: 1000;
 }
 
-.namecontainer {
-}
-
-.image1 {
-  width: "auto";
-  height: clamp("24px", "3vw", "32px");
-}
-
 .NavLink {
   color: white;
   text-decoration: none;
   margin: 0 clamp(1rem, 2vw + 1rem, 3rem);
   font-family: var(--font-inter);
   font-weight: 800;
-  font-size: clamp(0.7rem, 1vw, 4rem);
+  font-size: clamp(0.7rem, 1vw, 2rem);
   display: block;
   white-space: nowrap;
   transition: color 0.3s;

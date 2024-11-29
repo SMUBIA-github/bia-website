@@ -39,7 +39,7 @@ const Navbar = () => {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    style={{ width: "45%", height: "auto", minWidth: "100px" }}
+                    style={{ width: "35%", height: "auto", minWidth: "100px" }}
                   />
                 </div>
               </Link>
