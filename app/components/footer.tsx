@@ -6,8 +6,10 @@ function FooterBar() {
     <div className={styles.footer}>
       <div className="row flex-nowrap">
         {/* SMUBIA - Join Now Section */}
-        <div className={`col-6 col-md-2 px-5 ${styles.column}`}>
-          <h3>SMUBIA - Join Now</h3>
+        <div className={`col-6 col-md-3`}>
+          <div className={styles.column}>
+            <h3>SMUBIA - Join Now</h3>
+          </div>
         </div>
 
         {/* Centered Content Section */}
