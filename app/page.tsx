@@ -53,7 +53,7 @@ export default function Home() {
     <main>
       <div className={styles.backgroundGifContainer}>
         <img
-          src="https://i0.wp.com/www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif?fit=450%2C250&ssl=1"
+          src="/biabg4.gif"
           alt="Background GIF"
           style={{
             position: "absolute",
