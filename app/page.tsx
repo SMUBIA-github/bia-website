@@ -52,17 +52,14 @@ export default function Home() {
   return (
     <main>
       <div className={styles.backgroundGifContainer}>
-        <img
-          src="/biabg4.gif"
+        <Image
+          src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biabg4-8OH28nxibgRrgcoljfo344JVGl5KVC.gif"
           alt="Background GIF"
+          fill
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
           }}
+          priority
         />
         {/* <video
           autoPlay
@@ -124,7 +121,7 @@ export default function Home() {
                   </button>
                   <button className={styles.button} type="button">
                     <a
-                      href="/images/prospectus.pdf" // Ensure this file is placed in the public/files folder
+                      href="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/prospectus-BwK6FPjMxf1o8v5YOjvux80rSJSqDy.pdf" // Ensure this file is placed in the public/files folder
                       download
                       className={styles.link}
                     >
@@ -136,7 +133,7 @@ export default function Home() {
               <div className="image-container w-1/3 flex justify-end">
                 <Image
                   className={styles.image1}
-                  src="/images/biapic7.jpg"
+                  src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic7-1YgafDPNrOX7PUKej3bd44TjJT5v4L.jpg"
                   alt="Photo 2"
                   width={300}
                   height={200}
@@ -169,7 +166,7 @@ export default function Home() {
               <div className="image-container w-1/2 flex justify-end">
                 <Image
                   className={styles.image1}
-                  src="/images/biapic2.jpg"
+                  src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic2-CKSujqIfzxfHoHCdrWlUtHD3XftCgu.jpg"
                   alt="Photo 1"
                   width={300}
                   height={200}
