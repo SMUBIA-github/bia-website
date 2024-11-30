@@ -183,7 +183,7 @@
 }
 
 .expandedText {
-  width: 50vw;
+  width: 80vw;
   font-size: clamp(0.8rem, 2vw, 2rem);
   opacity: 0; /* Hide the expanded text initially */
   visibility: hidden; /* Prevent interaction when hidden */
@@ -200,7 +200,7 @@
   z-index: 10; /* Ensure it appears above other content */
   transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
   left: 50%; /* Center horizontally */
-  transform: translateX(-34%); /* Adjust position for perfect centering */
+  transform: translateX(-29%); /* Adjust position for perfect centering */
 }
 
 .reachContainer:hover .expandedText {
