@@ -26,7 +26,7 @@ const AlumniTestimonials = () => {
   ];
 
   return (
-    <div className="bg-black text-white">
+    <div className=" text-white">
       <h1 className={styles.maintext}>
         Beyond Singapore Management University
       </h1>
@@ -40,7 +40,7 @@ const AlumniTestimonials = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-md">
+          <div key={index} className="p-6 rounded-lg shadow-md">
             <Image
               className="rounded-full mb-4"
               src={testimonial.imgSrc}

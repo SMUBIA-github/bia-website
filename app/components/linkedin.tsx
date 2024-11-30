@@ -42,8 +42,11 @@ const LinkedInSection = () => {
                   src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic1-rCj7aFcj9V4cGDv9qUCX9UEoMQEvjU.jpg"
                   className="d-block w-100 rounded-lg"
                   alt="LinkedIn Post 1"
-                  width={300}
-                  height={200}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                  priority
                 />
               </div>
               <div className="carousel-item">
@@ -51,8 +54,11 @@ const LinkedInSection = () => {
                   src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic3-4HkJfiuOsvowYHuEPETJVnE6NliZrY.jpg"
                   className="d-block w-100 rounded-lg"
                   alt="LinkedIn Post 2"
-                  width={300}
-                  height={200}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                  priority
                 />
               </div>
               <div className="carousel-item">
@@ -60,8 +66,11 @@ const LinkedInSection = () => {
                   src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic4-kJ3F6TzWWoWjxAut9RCGYS58taE8uz.jpg"
                   className="d-block w-100 rounded-lg"
                   alt="LinkedIn Post 2"
-                  width={300}
-                  height={200}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                  priority
                 />
               </div>
             </div>
