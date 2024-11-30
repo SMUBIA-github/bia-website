@@ -49,19 +49,29 @@ const ScrollReveal = ({ children, threshold = 0.1 }: ScrollRevealProps) => {
 };
 
 export default function Home() {
-  const [showGif, setShowGif] = useState(true);
+  const [showVideo, setShowVideo] = useState(true);
   return (
     <main>
       <div className={styles.backgroundGifContainer}>
-        {showGif && (
-          <Image
-            src="https://thisisformygif.s3.ap-southeast-2.amazonaws.com/test.gif"
-            alt="Background GIF"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-            onError={() => setShowGif(false)}
-          />
+        {showVideo && (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+            }}
+            onError={() => setShowVideo(false)}
+          >
+            <source
+              src="https://thisisformygif.s3.ap-southeast-2.amazonaws.com/test.mp4"
+              type="video/mp4"
+            />
+          </video>
         )}
       </div>
 
