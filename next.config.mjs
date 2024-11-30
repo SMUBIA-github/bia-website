@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "ssvs8thfuktvqsqk.public.blob.vercel-storage.com",
       },
+      {
+        protocol: "https",
+        hostname: "thisisformygif.s3.ap-southeast-2.amazonaws.com",
+      },
     ],
   },
 };

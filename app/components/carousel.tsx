@@ -19,9 +19,10 @@ const AlumniTestimonials = () => {
     },
     {
       name: "Brejesh",
-      title: "Role1",
-      text: "I had a great time in SMUBIA. Work day and night... it was amazing... Wow... I gained a lot of experience...",
-      imgSrc: "/images/photo1.jpg",
+      title: "DAP Member",
+      text: "SMUBIA has allowed me to explore my interest in data analytics while building meaningful relationships with peers, offering opportunities to learn in a community of like-minded individuals.",
+      imgSrc:
+        "https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/brejesh-IsVFe8Ltl1WZ4tHBBl7ff9hMArU9UF.jpg",
     },
   ];
 
@@ -40,14 +41,18 @@ const AlumniTestimonials = () => {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="p-6 rounded-lg shadow-md">
+          <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-md">
             <Image
               className="rounded-full mb-4"
               src={testimonial.imgSrc}
               alt={testimonial.name}
-              width={100} // Set your desired width
-              height={100} // Set your desired height
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "30%", height: "auto" }}
+              priority
             />
+
             <div className={styles.testimonialcontainer}>
               <p className={styles.testimonialtext}>{testimonial.text}</p>
               <div className={styles.testimonialfooter}>

@@ -49,27 +49,20 @@ const ScrollReveal = ({ children, threshold = 0.1 }: ScrollRevealProps) => {
 };
 
 export default function Home() {
+  const [showGif, setShowGif] = useState(true);
   return (
     <main>
       <div className={styles.backgroundGifContainer}>
-        <Image
-          src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biabg4-8OH28nxibgRrgcoljfo344JVGl5KVC.gif"
-          alt="Background GIF"
-          fill
-          style={{
-            objectFit: "cover",
-          }}
-          priority
-        />
-        {/* <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className={styles.backgroundVideo}
-        >
-          <source src="/images/BIGABG4.mp4" type="video/mp4" />
-        </video> */}
+        {showGif && (
+          <Image
+            src="https://thisisformygif.s3.ap-southeast-2.amazonaws.com/test.gif"
+            alt="Background GIF"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+            onError={() => setShowGif(false)}
+          />
+        )}
       </div>
 
       <div className={styles.whowearecontainer}>
@@ -135,9 +128,11 @@ export default function Home() {
                   className={styles.image1}
                   src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic7-1YgafDPNrOX7PUKej3bd44TjJT5v4L.jpg"
                   alt="Photo 2"
-                  width={300}
-                  height={200}
-                  layout="intrinsic"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  // style={{ width: "50%", height: "auto" }}
+                  priority
                 />
               </div>
             </div>
@@ -168,9 +163,11 @@ export default function Home() {
                   className={styles.image1}
                   src="https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/biapic2-CKSujqIfzxfHoHCdrWlUtHD3XftCgu.jpg"
                   alt="Photo 1"
-                  width={300}
-                  height={200}
-                  layout="intrinsic"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  // style={{ width: "50%", height: "auto" }}
+                  priority
                 />
               </div>
             </div>

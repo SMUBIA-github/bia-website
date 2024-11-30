@@ -17,29 +17,23 @@
   margin-bottom: 3rem;
 }
 
-.testimonialcontainer {
-  min-height: auto;
-  display: flex;
-  flex-direction: column;
-  height: 73%;
-}
-
 .testimonialtext {
   flex: 1;
   font-weight: 600;
-  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
+  font-size: clamp(0.7rem, 1vw, 1.2rem);
 }
 
 .testimonialfooter {
-  margin-top: auto;
+  padding-top: 1rem;
+  width: 17vw;
 }
 
 .testimonialname {
-  font-size: clamp(1rem, 1vw, 1.4rem);
+  font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 .testimonialtitle {
   color: rgb(156 163 175);
-  font-size: clamp(1rem, 1vw, 1.4rem);
+  font-size: clamp(0.7rem, 1vw, 1rem);
   margin-bottom: 1rem;
 }
