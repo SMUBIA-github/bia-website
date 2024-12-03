@@ -68,7 +68,7 @@ export default function Home() {
             onError={() => setShowVideo(false)}
           >
             <source
-              src="https://thisisformygif.s3.ap-southeast-2.amazonaws.com/test.mp4"
+              src="https://thisisformygif2.s3.ap-southeast-1.amazonaws.com/test1.mp4"
               type="video/mp4"
             />
           </video>
