@@ -44,6 +44,22 @@
   color: #ffcc00;
 }
 
+.DataLink {
+  color: white;
+  text-decoration: none;
+  margin: 0 clamp(1rem, 2vw + 1rem, 3rem);
+  font-family: var(--font-inter);
+  font-weight: 800;
+  font-size: clamp(0.7rem, 1vw, 2rem);
+  display: block;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.DataLink:hover {
+  color: rgb(50, 200, 200);
+}
+
 .NavLinkContainer {
   display: flex;
   align-items: center;

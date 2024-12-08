@@ -93,8 +93,8 @@ export default function Home() {
               </div>
             </span>
           </div>
+          <div id="mission"></div>
           <Divider />
-
           <ScrollReveal>
             <div className={styles.cardcontainer}>
               <span className={styles.maintext}>Our Mission</span>
@@ -106,7 +106,7 @@ export default function Home() {
               </p>
             </div>
           </ScrollReveal>
-
+          <div id="vision"></div>
           <Divider />
 
           <ScrollReveal>
@@ -182,7 +182,7 @@ export default function Home() {
               </div>
             </div>
           </ScrollReveal>
-
+          <div id="alumni"></div>
           <Divider />
 
           <ScrollReveal>

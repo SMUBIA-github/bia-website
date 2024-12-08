@@ -25,7 +25,7 @@
 }
 
 .tagline {
-  font-size: clamp(2rem, 6.1vw, 10rem); /* Responsive font size */
+  font-size: clamp(2rem, 5.3vw, 10rem); /* Responsive font size */
   font-weight: bold;
 }
 
@@ -214,14 +214,6 @@
 
 /* Media Queries for Further Responsiveness */
 @media (max-width: 768px) {
-  .tagline {
-    font-size: clamp(
-      2rem,
-      8vw,
-      4rem
-    ); /* Make tagline larger on smaller screens */
-  }
-
   .button {
     width: 100%; /* Make button full width */
   }
@@ -245,7 +237,7 @@
 }
 
 .taglinecontainer {
-  margin-bottom: clamp(2rem, 15vw + 1rem, 20rem);
+  margin-bottom: clamp(2rem, 15vw + 1rem, 15rem);
   margin-top: 1rem;
 }
 

@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className={styles.namecontainer}>
                   <Image
                     src="/images/logo.png"
-                    alt="Description of the image"
+                    alt="logo"
                     width={0}
                     height={0}
                     sizes="100vw"
@@ -59,7 +59,7 @@ const Navbar = () => {
                   <Link
                     href="https://hackathon-two-rho.vercel.app/"
                     target="_blank"
-                    className={styles.NavLink}
+                    className={styles.DataLink}
                   >
                     Datathon
                   </Link>

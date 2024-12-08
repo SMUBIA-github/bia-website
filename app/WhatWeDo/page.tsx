@@ -1,33 +1,54 @@
-import React from 'react';
-import Wordcard from '../components/Wordcard';
+"use client";
+import React, { useState, useEffect, ReactNode } from "react";
+import Wordcard from "../components/Wordcard";
 import styles from "./WhatWeDo.module.css";
 import Image from "next/image";
 // import Timeline from "../components/Timelines/Timeline"
 // import Timeline2 from '../components/Timelines/Timeline2';
-import DAP from '../components/DAP'
-import TimelineMain from '../components/Timelines/TimelineMain';
+import DAP from "../components/DAP";
+import TimelineMain from "../components/Timelines/TimelineMain";
 
 const Page: React.FC = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL when the page loads
+    if (window.location.hash) {
+      // Remove the # from the hash to get the ID
+      const id = window.location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
   return (
-    <div className={styles['page-container']}>
+    <div className={styles["page-container"]}>
       {/* Section 1: Cat image and Text */}
-      <div className={styles['section1']}>
-      <div className={styles['catimg-container']}>
-        <Image src='/images/BIAMASCOT.png' alt="BIAMascot" className={styles.catimg} width={500} height={500} />
-      </div>
-        <div className={styles['text-container']}>
+      <div className={styles["section1"]}>
+        <div className={styles["catimg-container"]}>
+          <Image
+            src="/images/BIAMASCOT.png"
+            alt="BIAMascot"
+            className={styles.catimg}
+            width={500}
+            height={500}
+          />
+        </div>
+        <div id="workshop"></div>
+        <div className={styles["text-container"]}>
           <div className={styles.header}>
             <h1>Workshops</h1>
           </div>
-          <div className={styles['para-text']}>
-          <p>This academic year, we&apos;re offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
-
+          <div className={styles["para-text"]}>
+            <p>
+              This academic year, we&apos;re offering an exciting line-up of
+              workshops open to everyone, regardless of skill levels or schools.
+            </p>
           </div>
         </div>
       </div>
 
       {/* Wordcards Section */}
-      <div className={styles['section1-cards']}>
+      <div className={styles["section1-cards"]}>
         <Wordcard
           title="Data Handling"
           imageSrc="/images/SQLSCREEN.png"
@@ -49,8 +70,9 @@ const Page: React.FC = () => {
       </div>
       {/* <Timeline/> */}
       {/* <Timeline2/> */}
-      <TimelineMain/>
-      <DAP/>
+      <TimelineMain />
+      <div id="dap"></div>
+      <DAP />
     </div>
   );
 };
