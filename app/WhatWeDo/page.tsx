@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, ReactNode } from "react";
+import React, { useEffect } from "react";
 import Wordcard from "../components/Wordcard";
 import styles from "./WhatWeDo.module.css";
 import Image from "next/image";
