@@ -1,0 +1,108 @@
+.modal-content {
+  /* Remove default focus styles */
+  outline: none !important;
+}
+
+.modal-wrapper {
+  /* Base size (mobile) */
+  --modal-width: min(95vw, 500px);
+  --modal-height: min(90vh, 600px);
+}
+
+/* Tablet/Small Desktop */
+@media (min-width: 768px) {
+  .modal-wrapper {
+    --modal-width: 600px;
+    --modal-height: 700px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .modal-wrapper {
+    --modal-width: 800px;
+    --modal-height: 800px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .modal-wrapper {
+    --modal-width: 1000px;
+    --modal-height: 900px;
+  }
+}
+
+/* 4K and Ultra-wide */
+@media (min-width: 2560px) {
+  .modal-wrapper {
+    --modal-width: 1400px;
+    --modal-height: 1000px;
+  }
+}
+
+/* Force modal dimensions */
+.modal-wrapper [role="dialog"] {
+  width: var(--modal-width) !important;
+  height: var(--modal-height) !important;
+  max-width: var(--modal-width) !important;
+  max-height: var(--modal-height) !important;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: clamp(1rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-text {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.close-button {
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+  width: clamp(32px, 2.5vw, 44px) !important;
+  height: clamp(32px, 2.5vw, 44px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.2s ease !important;
+  z-index: 10;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Remove focus ring from modal and buttons */
+.modal-content:focus,
+.modal-content:focus-visible,
+.close-button:focus,
+.close-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}

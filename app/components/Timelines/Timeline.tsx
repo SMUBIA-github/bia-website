@@ -1,93 +1,120 @@
-'use client';
-import React, { useState, useEffect, useRef } from 'react';
-import styles from './timeline.module.css';
-import EventCard from '../EventCard';
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards, Controller } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 interface Event {
+  imageUrl: string;
   title: string;
   description: string;
-  date: Date;
-  futureEvent: boolean;
-  imageUrl: string;
+  futureEvent?: boolean;
 }
 
-const dummyEvents: Event[] = [
-  {
-    title: 'BIA Picnic',
-    description: 'Learn how to use PowerQuery in the Data Analytics Cycle...',
-    date: new Date('2024-11-15'),
-    futureEvent: true,
-    imageUrl: '/images/9thdap.jpg',
-  },
-  {
-    title: 'Data Workshop',
-    description: 'Explore data visualization techniques...',
-    date: new Date('2024-09-10'),
-    futureEvent: false,
-    imageUrl: '/images/Co-learning2022.jpg',
-  },
-  {
-    title: 'Data Workshop2',
-    description: 'Explore data visualization techniques...',
-    date: new Date('2024-09-10'),
-    futureEvent: false,
-    imageUrl: '/images/9thdap.jpg',
-  },
-  {
-    title: 'Data Workshop3',
-    description: 'Explore data visualization techniques...',
-    date: new Date('2024-09-10'),
-    futureEvent: false,
-    imageUrl: '/images/Co-learning2022.jpg',
-  },
-  // Add more events as needed
-];
-
-const Timeline: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const timelineRef = useRef<HTMLDivElement | null>(null);
-
-  const handleScroll = (event: WheelEvent) => {
-    if (timelineRef.current && timelineRef.current.contains(event.target as Node)) {
-      event.preventDefault(); // Prevent default scrolling behavior only within the component
-      const delta = event.deltaY;
-
-      if (delta > 30) {
-        // Scroll down (threshold to reduce sensitivity)
-        setCurrentIndex((prev) => (prev < dummyEvents.length - 1 ? prev + 1 : prev));
-      } else if (delta < -30) {
-        // Scroll up
-        setCurrentIndex((prev) => (prev > 0 ? prev - 1 : prev));
-      }
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('wheel', handleScroll, { passive: false });
-    return () => window.removeEventListener('wheel', handleScroll);
-  }, []);
+const Timeline = ({ events }: { events: Event[] }) => {
+  const [imageSwiper, setImageSwiper] = useState<SwiperType | null>(null);
+  const [contentSwiper, setContentSwiper] = useState<SwiperType | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div ref={timelineRef} className={styles.timelineContainer}>
-      <div className={styles.imageContainer}>
-        {dummyEvents.map((event, index) => {
-          const isCurrent = index === currentIndex;
-          const isVisible = Math.abs(index - currentIndex) <= 1;
+<div className="relative w-full min-h-screen bg-black flex flex-col items-center px-4 md:px-8">
+  {/* Content Container */}
+  <div className="relative w-full max-w-[2400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col items-center">
+    <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-white mt-8 mb-4">
+      Timeline
+    </h1>
 
-          return (
-            isVisible && (
-              <img
-                key={index}
-                src={event.imageUrl}
-                alt={event.title}
-                className={`${styles.image} ${isCurrent ? styles.currentImage : styles.hiddenImage}`}
-              />
-            )
-          );
-        })}
-      </div>
-      <div className={styles.eventDetailContainer}>
-        <EventCard event={dummyEvents[currentIndex]} />
+        {/* Main Content Wrapper */}
+        <div className="w-full flex flex-col items-center gap-8 py-8">
+          {/* Image Section with Larger Sizing */}
+          <div className="w-full relative">
+            <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[70%] mx-auto aspect-[16/9]">
+              <Swiper
+                effect="cards"
+                grabCursor={true}
+                modules={[EffectCards, Controller]}
+                className="w-full h-full"
+                onSwiper={setImageSwiper}
+                controller={{ control: contentSwiper }}
+                cardsEffect={{
+                  perSlideOffset: 8,
+                  perSlideRotate: 2,
+                  rotate: true,
+                  slideShadows: true,
+                }}
+                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              >
+                {events.map((event, index) => (
+                  <SwiperSlide key={index} className="rounded-xl overflow-hidden">
+                    <div className="relative w-full h-full">
+                      <img
+                        src={event.imageUrl}
+                        alt={event.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div
+                        className={`absolute inset-0 ${
+                          index !== activeIndex ? 'bg-black/30' : ''
+                        }`}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* Navigation Buttons - Original Style */}
+            <div className="flex justify-center gap-6 mt-8">
+              <button
+                onClick={() => imageSwiper?.slidePrev()}
+                className="bg-transparent text-white rounded-full p-3 hover:bg-white hover:text-black transition-colors"
+              >
+                <ChevronLeft className="w-8 h-8" />
+              </button>
+              <button
+                onClick={() => imageSwiper?.slideNext()}
+                className="bg-transparent text-white rounded-full p-3 hover:bg-white hover:text-black transition-colors"
+              >
+                <ChevronRight className="w-8 h-8" />
+              </button>
+            </div>
+          </div>
+
+          {/* Content Section with Larger Text */}
+          <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] xl:max-w-[70%] mx-auto">
+            <Swiper
+              modules={[Controller]}
+              onSwiper={setContentSwiper}
+              controller={{ control: imageSwiper }}
+              className="w-full"
+              allowTouchMove={false}
+            >
+              {events.map((event, index) => (
+                <SwiperSlide key={index}>
+                  <div className="text-center p-8">
+                    <h2 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6">
+                      {event.title}
+                    </h2>
+                    <p className="text-md md:text-xl lg:text-2xl xl:text-3xl text-white/80 mb-8 max-w-[90%] mx-auto">
+                      {event.description}
+                    </p>
+                    {event.futureEvent && (
+                      <button className="bg-transparent text-white font-semibold 
+                                     px-8 py-3 rounded-full border-2 border-white
+                                     hover:bg-white hover:text-black transition-colors
+                                     text-lg md:text-xl lg:text-2xl
+                                     uppercase tracking-wider">
+                        SIGN UP
+                      </button>
+                    )}
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
     </div>
   );

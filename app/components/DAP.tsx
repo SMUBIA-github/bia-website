@@ -50,9 +50,9 @@ const DAP: React.FC = () => {
         <h2 className={styles.highlightsTitle}>Highlights from the 10th DAP</h2>
         <div className={styles.projectsGrid}>
           <div className={styles.projectItem}>
-          <div className={styles.projectImage}>
-            <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
-          </div>
+            <div className={styles.projectImage}>
+              <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
+            </div>
             <div className={styles.projectDescription}>
               Project Description
             </div>
@@ -62,8 +62,8 @@ const DAP: React.FC = () => {
               Project Description
             </div>
             <div className={styles.projectImage}>
-            <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
-          </div>
+              <Image src="/images/SQLSCREEN.png" alt="Project Picture" width={500} height={300} />
+            </div>
           </div>
         </div>
       </div>

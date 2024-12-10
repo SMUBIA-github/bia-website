@@ -1,100 +1,217 @@
 .container {
-    background-color: #000000;
-    color: white;
-    width: 100%;
-  }
-  
-  .headerSection {
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitle {
-    color: #888;
-    margin-bottom: 2rem;
-  }
-  
-  .description, 
-  .additionalInfo {
-    max-width: 600px;
-    margin: 0 auto 1.5rem;
-    line-height: 1.6;
-  }
-  
+  background-color: #000000;
+  color: white;
+  width: 100%;
+}
+
+.headerSection {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Responsive text size for h1 */
+@media (min-width: 768px) {
+.title {
+  font-size: 3rem; /* md: text size */
+}
+}
+
+@media (min-width: 1024px) {
+.title {
+  font-size: 3.5rem; /* lg: text size */
+}
+}
+
+@media (min-width: 1280px) {
+.title {
+  font-size: 4rem; /* xl: text size */
+}
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+/* Responsive text size for subtitle */
+@media (min-width: 768px) {
+.subtitle {
+  font-size: 1.2rem; /* md: text size */
+}
+}
+
+@media (min-width: 1024px) {
+.subtitle {
+  font-size: 1.4rem; /* lg: text size */
+}
+}
+
+@media (min-width: 1280px) {
+.subtitle {
+  font-size: 1.5rem; /* xl: text size */
+}
+}
+
+.description,
+.additionalInfo {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive text size for description and additionalInfo */
+@media (min-width: 768px) {
+.description,
+.additionalInfo {
+  font-size: 1rem; /* md: text size */
+}
+}
+
+@media (min-width: 1024px) {
+.description,
+.additionalInfo {
+  font-size: 1.2rem; /* lg: text size */
+}
+}
+
+@media (min-width: 1280px) {
+.description,
+.additionalInfo {
+  font-size: 1.3rem; /* xl: text size */
+}
+}
+
+.slideDeckButton {
+  background: transparent;
+  border: 2px solid white; /* Matches the border thickness of the SIGN UP button */
+  color: white;
+  padding: 0.75rem 2rem; /* Matches the padding */
+  border-radius: 9999px; /* Fully rounded button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600; /* Matches the font weight of the SIGN UP button */
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 0.05em; /* Adds spacing between the letters */
+  font-size: 1.125rem; /* Default text size */
+}
+
+.slideDeckButton:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.slideDeckButton:hover {
+  background: white;
+  color: black;
+}
+
+/* Matching the original wordcard section styling */
+.cardsSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.programCard {
+  flex: 1;
+  max-width: 30%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.programCard:hover {
+  transform: scale(1.05);
+}
+
+.highlightsSection {
+  padding: 4rem 2rem;
+}
+
+.highlightsTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Responsive text size for highlightsTitle */
+@media (min-width: 768px) {
+.highlightsTitle {
+  font-size: 2rem; /* md: text size */
+}
+}
+
+@media (min-width: 1024px) {
+.highlightsTitle {
+  font-size: 2.5rem; /* lg: text size */
+}
+.slideDeckButton {
+  font-size: 1.5rem; /* Matches text-2xl on larger screens */
+}
+}
+
+@media (min-width: 1280px) {
+.highlightsTitle {
+  font-size: 3rem; /* xl: text size */
+}
+}
+@media (min-width: 640px) {
   .slideDeckButton {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-size: 1.25rem; /* Matches text-xl on medium screens */
   }
-  
-  .slideDeckButton:hover {
-    background: white;
-    color: black;
-  }
-  
-  /* Matching the original wordcard section styling */
-  .cardsSection {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-  }
-  
-  .programCard {
-    flex: 1;
-    max-width: 30%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .programCard:hover {
-    transform: scale(1.05);
-  }
-  
-  .highlightsSection {
-    padding: 4rem 2rem;
-  }
-  
-  .highlightsTitle {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  .projectsGrid {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .projectItem {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 4rem;
-  }
-  
-  .projectItem:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  
-  .projectImage {
-    flex: 1;
-    aspect-ratio: 4/3;
-    background: #333;
-    border-radius: 1rem;
-  }
-  
-  .projectDescription {
-    flex: 1;
-  }
+}
+
+
+.projectsGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.projectItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.projectImage {
+  flex: 1;
+  aspect-ratio: 4/3;
+  background: #333;
+  border-radius: 1rem;
+}
+
+.projectDescription {
+  flex: 1;
+}
+
+/* Responsive text size for project description */
+@media (min-width: 768px) {
+.projectDescription {
+  font-size: 1rem; /* md: text size */
+}
+}
+
+@media (min-width: 1024px) {
+.projectDescription {
+  font-size: 1.2rem; /* lg: text size */
+}
+}
+
+@media (min-width: 1280px) {
+.projectDescription {
+  font-size: 1.3rem; /* xl: text size */
+}
+}

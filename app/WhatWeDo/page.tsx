@@ -3,10 +3,9 @@ import React, { useEffect } from "react";
 import Wordcard from "../components/Wordcard";
 import styles from "./WhatWeDo.module.css";
 import Image from "next/image";
-// import Timeline from "../components/Timelines/Timeline"
-// import Timeline2 from '../components/Timelines/Timeline2';
-import DAP from "../components/DAP";
-import TimelineMain from "../components/Timelines/TimelineMain";
+import DAP from '../components/DAP'
+import TimelineMain from '../components/Timelines/TimelineMain';
+import Divider from '../components/divider';
 
 const Page: React.FC = () => {
   useEffect(() => {
@@ -23,26 +22,16 @@ const Page: React.FC = () => {
   return (
     <div className={styles["page-container"]}>
       {/* Section 1: Cat image and Text */}
-      <div className={styles["section1"]}>
-        <div className={styles["catimg-container"]}>
-          <Image
-            src="/images/BIAMASCOT.png"
-            alt="BIAMascot"
-            className={styles.catimg}
-            width={500}
-            height={500}
-          />
+      <div className={styles['section1']}>
+        <div className={styles['catimg-container']}>
+          <Image src='/images/BIAMASCOT.png' alt="BIAMascot" className={styles.catimg} width={500} height={500} />
         </div>
-        <div id="workshop"></div>
-        <div className={styles["text-container"]}>
+        <div className={styles['text-container']}>
           <div className={styles.header}>
             <h1>Workshops</h1>
           </div>
-          <div className={styles["para-text"]}>
-            <p>
-              This academic year, we&apos;re offering an exciting line-up of
-              workshops open to everyone, regardless of skill levels or schools.
-            </p>
+          <div className={styles['para-text']}>
+            <p>This academic year, we're offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
           </div>
         </div>
       </div>
@@ -68,10 +57,9 @@ const Page: React.FC = () => {
           className={styles.wordcard}
         />
       </div>
-      {/* <Timeline/> */}
-      {/* <Timeline2/> */}
+      <Divider/>
       <TimelineMain />
-      <div id="dap"></div>
+      <Divider/>
       <DAP />
     </div>
   );

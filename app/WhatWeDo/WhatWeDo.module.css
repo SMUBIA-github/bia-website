@@ -5,7 +5,7 @@
   font-family: var(--font-inter);
 }
 
-/* Container for the cat image and text */
+/* Section 1: Cat image and Text */
 .section1 {
   position: relative;
   display: flex;
@@ -16,7 +16,22 @@
   font-family: var(--font-inter);
 }
 
-/* Cat image positioned on the left */
+/* Responsive styling for the header text */
+.header {
+  font-family: var(--font-inter);
+  font-size: clamp(1.5rem, 4vw, 3rem); /* Responsive font size */
+  margin-bottom: 20px;
+}
+
+/* Text container for description */
+.para-text {
+  font-size: clamp(0.875rem, 3vw, 1.25rem); /* Responsive font size */
+  max-width: 400px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+/* Section 1: Cat image */
 .catimg-container {
   position: relative;
   z-index: 1;
@@ -39,20 +54,7 @@
   font-family: var(--font-inter);
 }
 
-.header {
-  font-family: var(--font-inter);
-  font-size: xx-large;
-  margin-bottom: 20px;
-}
-
-.para-text {
-  font-size: medium;
-  max-width: 300px;
-  line-height: 1.6;
-  margin: 0 auto;
-}
-
-/* Wordcards positioned lower, overlapping the cat */
+/* Section 1 Cards */
 .section1-cards {
   position: relative;
   display: flex;
@@ -63,6 +65,7 @@
   margin-top: -100px; /* Move cards up to cover 10% of the cat image */
 }
 
+/* Wordcard Styles */
 .wordcard {
   flex: 1;
   max-width: 30%;
@@ -75,3 +78,61 @@
   transform: scale(1.05);
 }
 
+@media (min-width: 768px) {
+  .para-text {
+    font-size: clamp(0.7rem, 3.5vw, 1.1rem); /* Responsive font size */
+    max-width: 450px;
+  }
+  .header {
+    font-size: clamp(2rem, 4.5vw, 3.5rem); /* Responsive font size */
+  }
+  .page-container {
+    padding: 2rem;
+  }
+  .section1-cards {
+    margin-top: -120px; /* Increase margin for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .para-text {
+    font-size: clamp(0.8rem, 4vw, 1.2rem); /* Responsive font size */
+    max-width: 500px;
+  }
+  .header {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+  }
+  .page-container {
+    padding: 3rem;
+  }
+  .section1-cards {
+    margin-top: -140px; /* Increase margin for large screens */
+  }
+}
+
+@media (min-width: 1536px) {
+  .para-text {
+    /* font-size: clamp(1.25rem, 4.5vw, 2.5rem); */
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .para-text {
+    font-size: clamp(0.75rem, 3vw, 1rem); /* Responsive font size */
+  }
+  .text-container{
+    padding-top: 10%;
+  }
+  .section1-cards{
+    margin-top: -50px;
+  }
+}
+@media (max-width: 576px) {
+  .para-text {
+    font-size: clamp(0.3rem, 3vw, 0.75rem); /* Responsive font size */
+  }
+  .text-container{
+    padding-top: 5%;
+  }
+}
