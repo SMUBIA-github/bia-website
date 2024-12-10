@@ -31,7 +31,7 @@ const Page: React.FC = () => {
             <h1>Workshops</h1>
           </div>
           <div className={styles['para-text']}>
-            <p>This academic year, we're offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
+            <p>This academic year, we&apos;re offering an exciting line-up of workshops open to everyone, regardless of skill levels or schools.</p>
           </div>
         </div>
       </div>

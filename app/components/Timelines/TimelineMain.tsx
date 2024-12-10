@@ -1,13 +1,13 @@
 // TimelineMain.tsx
 'use client';
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
-import TimelineDesktop from './TimelineDesktop';
-import TimelineMobile from './TimelineMobile';
+// import { useMediaQuery } from 'react-responsive';
+// import TimelineDesktop from './TimelineDesktop';
+// import TimelineMobile from './TimelineMobile';
 import Timeline from './Timeline';
 
 const TimelineMain = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  // const isMobile = useMediaQuery({ maxWidth: 768 });
   
   const events = [
     {

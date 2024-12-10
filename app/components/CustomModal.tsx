@@ -35,7 +35,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
       className={styles['modal-content']}
     >
       <ModalContent>
-        {(onClose) => (
+        {/* {(onClose) => ( */}
           <>
             <ModalHeader className="flex flex-col gap-1">
               {title}
@@ -51,7 +51,7 @@ const CustomModal: React.FC<CustomModalProps> = ({
               </p>
             </ModalBody>
           </>
-        )}
+        {/* )} */}
       </ModalContent>
     </Modal>
   );
