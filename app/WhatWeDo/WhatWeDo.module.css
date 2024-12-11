@@ -1,5 +1,4 @@
 .page-container {
-  position: relative;
   width: 100%;
   margin: 0 auto;
   font-family: var(--font-inter);
@@ -62,7 +61,7 @@
   gap: 10px; /* Small gap between the cards */
   padding: 20px;
   z-index: 2; /* Keep above the cat image */
-  margin-top: -100px; /* Move cards up to cover 10% of the cat image */
+  margin-top: 100px; /* Add vertical distance */
 }
 
 /* Wordcard Styles */
@@ -78,6 +77,16 @@
   transform: scale(1.05);
 }
 
+/* Timeline Section */
+.timeline-section {
+  padding: 100px 0; /* Add vertical distance */
+}
+
+/* DAP Section */
+.dap-section {
+  padding: 100px 0; /* Add vertical distance */
+}
+
 @media (min-width: 768px) {
   .para-text {
     font-size: clamp(0.7rem, 3.5vw, 1.1rem); /* Responsive font size */
@@ -90,7 +99,7 @@
     padding: 2rem;
   }
   .section1-cards {
-    margin-top: -120px; /* Increase margin for medium screens */
+    margin-top: 120px; /* Increase margin for medium screens */
   }
 }
 
@@ -106,14 +115,7 @@
     padding: 3rem;
   }
   .section1-cards {
-    margin-top: -140px; /* Increase margin for large screens */
-  }
-}
-
-@media (min-width: 1536px) {
-  .para-text {
-    /* font-size: clamp(1.25rem, 4.5vw, 2.5rem); */
-    font-size: 2.4rem;
+    margin-top: 140px; /* Increase margin for large screens */
   }
 }
 
@@ -125,7 +127,7 @@
     padding-top: 10%;
   }
   .section1-cards{
-    margin-top: -50px;
+    margin-top: 50px; /* Reduce margin for small screens */
   }
 }
 @media (max-width: 576px) {
