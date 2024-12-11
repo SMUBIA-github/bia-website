@@ -57,7 +57,7 @@ const Navbar = () => {
                     What we do
                   </Link>
                   <Link
-                    href="https://hackathon-two-rho.vercel.app/"
+                    href="https://datathon.smubia.com"
                     target="_blank"
                     className={styles.DataLink}
                   >

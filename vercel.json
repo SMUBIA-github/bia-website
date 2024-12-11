@@ -1,9 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "/Datathon",
-        "destination": "https://hackathon-two-rho.vercel.app/"
-      }
-    ]
-  }
-  
