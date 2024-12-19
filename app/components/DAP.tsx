@@ -124,12 +124,10 @@ const DAP: React.FC = () => {
 
           <div className={styles.projectItem}>
             <div className={styles.imageContainer}>
-              <img 
+            <img 
                 src="/images/Lyrics-Machine.gif" 
                 alt="Lyrics Machine" 
-                fill
-                className={styles.projectImage}
-                objectFit="cover"
+                className={styles.projectImage} 
               />
             </div>
             <div className={styles.projectDescription}>
