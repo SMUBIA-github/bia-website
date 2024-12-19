@@ -124,7 +124,7 @@ const DAP: React.FC = () => {
 
           <div className={styles.projectItem}>
             <div className={styles.imageContainer}>
-              <Image 
+              <img 
                 src="/images/Lyrics-Machine.gif" 
                 alt="Lyrics Machine" 
                 fill
