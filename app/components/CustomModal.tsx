@@ -7,7 +7,7 @@ interface CustomModalProps {
   onClose: () => void;
   title: string;
   imageSrc: string;
-  overlayContent: string;
+  overlayContent: React.ReactNode;
 }
 
 const CustomModal: React.FC<CustomModalProps> = ({
@@ -24,10 +24,11 @@ const CustomModal: React.FC<CustomModalProps> = ({
       size="md"
       backdrop="blur"
       placement="center"
+      scrollBehavior="inside"
       classNames={{
         base: "bg-[#353535]",
         wrapper: styles['modal-wrapper'],
-        body: styles['modal-body'],
+        body: `${styles['modal-body']} ${styles['scrollable']}`,
         header: styles['modal-header'],
         closeButton: styles['close-button'],
         backdrop: "backdrop-blur-lg",
@@ -35,23 +36,19 @@ const CustomModal: React.FC<CustomModalProps> = ({
       className={styles['modal-content']}
     >
       <ModalContent>
-        {/* {(onClose) => ( */}
-          <>
-            <ModalHeader className="flex flex-col gap-1">
-              {title}
-            </ModalHeader>
-            <ModalBody>
-              <img 
-                src={imageSrc} 
-                alt={title} 
-                className={styles['modal-image']}
-              />
-              <p className={styles['modal-text']}>
-                {overlayContent}
-              </p>
-            </ModalBody>
-          </>
-        {/* )} */}
+        <ModalHeader className={styles['modal-header']}>
+          {title}
+        </ModalHeader>
+        <ModalBody>
+          <img 
+            src={imageSrc} 
+            alt={title} 
+            className={styles['modal-image']}
+          />
+          <div className={styles['modal-text']}>
+            {overlayContent}
+          </div>
+        </ModalBody>
       </ModalContent>
     </Modal>
   );

@@ -1,9 +1,11 @@
+/* General container styling */
 .container {
   background-color: #000000;
   color: white;
   width: 100%;
 }
 
+/* Header Section */
 .headerSection {
   text-align: center;
   padding: 4rem 2rem;
@@ -15,25 +17,26 @@
   margin-bottom: 1rem;
 }
 
-/* Responsive text size for h1 */
+/* Responsive text size for title */
 @media (min-width: 768px) {
-.title {
-  font-size: 3rem; /* md: text size */
-}
+  .title {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
-.title {
-  font-size: 3.5rem; /* lg: text size */
-}
+  .title {
+    font-size: 3.5rem;
+  }
 }
 
 @media (min-width: 1280px) {
-.title {
-  font-size: 4rem; /* xl: text size */
-}
+  .title {
+    font-size: 4rem;
+  }
 }
 
+/* Subtitle */
 .subtitle {
   color: #888;
   margin-bottom: 2rem;
@@ -41,23 +44,24 @@
 
 /* Responsive text size for subtitle */
 @media (min-width: 768px) {
-.subtitle {
-  font-size: 1.2rem; /* md: text size */
-}
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 1024px) {
-.subtitle {
-  font-size: 1.4rem; /* lg: text size */
-}
+  .subtitle {
+    font-size: 1.4rem;
+  }
 }
 
 @media (min-width: 1280px) {
-.subtitle {
-  font-size: 1.5rem; /* xl: text size */
-}
+  .subtitle {
+    font-size: 1.5rem;
+  }
 }
 
+/* Description and Additional Info */
 .description,
 .additionalInfo {
   max-width: 600px;
@@ -67,38 +71,39 @@
 
 /* Responsive text size for description and additionalInfo */
 @media (min-width: 768px) {
-.description,
-.additionalInfo {
-  font-size: 1rem; /* md: text size */
-}
+  .description,
+  .additionalInfo {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
-.description,
-.additionalInfo {
-  font-size: 1.2rem; /* lg: text size */
-}
+  .description,
+  .additionalInfo {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 1280px) {
-.description,
-.additionalInfo {
-  font-size: 1.3rem; /* xl: text size */
-}
+  .description,
+  .additionalInfo {
+    font-size: 1.3rem;
+  }
 }
 
+/* Slide Deck Button */
 .slideDeckButton {
   background: transparent;
-  border: 2px solid white; /* Matches the border thickness of the SIGN UP button */
+  border: 2px solid white;
   color: white;
-  padding: 0.75rem 2rem; /* Matches the padding */
-  border-radius: 9999px; /* Fully rounded button */
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 600; /* Matches the font weight of the SIGN UP button */
-  text-transform: uppercase; /* Makes text uppercase */
-  letter-spacing: 0.05em; /* Adds spacing between the letters */
-  font-size: 1.125rem; /* Default text size */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
 }
 
 .slideDeckButton:hover {
@@ -106,13 +111,7 @@
   color: black;
 }
 
-
-.slideDeckButton:hover {
-  background: white;
-  color: black;
-}
-
-/* Matching the original wordcard section styling */
+/* Cards Section */
 .cardsSection {
   position: relative;
   display: flex;
@@ -133,85 +132,169 @@
   transform: scale(1.05);
 }
 
+/* Highlights Section */
 .highlightsSection {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #000000, #111111);
 }
 
 .highlightsTitle {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
+  position: relative;
+  font-size: 3rem; /* Base size - increased */
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Responsive text size for highlightsTitle */
-@media (min-width: 768px) {
-.highlightsTitle {
-  font-size: 2rem; /* md: text size */
-}
-}
-
-@media (min-width: 1024px) {
-.highlightsTitle {
-  font-size: 2.5rem; /* lg: text size */
-}
-.slideDeckButton {
-  font-size: 1.5rem; /* Matches text-2xl on larger screens */
-}
-}
-
-@media (min-width: 1280px) {
-.highlightsTitle {
-  font-size: 3rem; /* xl: text size */
-}
-}
 @media (min-width: 640px) {
-  .slideDeckButton {
-    font-size: 1.25rem; /* Matches text-xl on medium screens */
+  .highlightsTitle {
+    font-size: 3.5rem; /* sm: text size */
   }
 }
 
+@media (min-width: 768px) {
+  .highlightsTitle {
+    font-size: 4rem; /* md: text size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .highlightsTitle {
+    font-size: 4.5rem; /* lg: text size */
+  }
+}
+
+@media (min-width: 1280px) {
+  .highlightsTitle {
+    font-size: 5rem; /* xl: text size */
+  }
+}
+
+@media (min-width: 1536px) {
+  .highlightsTitle {
+    font-size: 5.5rem; /* 2xl: text size */
+  }
+}
+
+.highlightsTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -1.5rem; /* Slightly increased to match larger text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px; /* Slightly wider line to match larger text */
+  height: 4px;
+  background: linear-gradient(90deg, #666666, #ffffff);
+  border-radius: 2px;
+}
 
 .projectsGrid {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .projectItem {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  gap: 4rem;
+  margin-bottom: 8rem;
+  opacity: 0.95;
+  transition: all 0.3s ease;
+}
+
+.projectItem:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.projectItem:last-child {
+  margin-bottom: 0;
 }
 
 .projectItem:nth-child(even) {
   flex-direction: row-reverse;
 }
 
+/* Project Image and Description */
+.imageContainer {
+  flex: 1;
+  position: relative;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: #1a1a1a;
+}
+
 .projectImage {
-  flex: 1;
-  aspect-ratio: 4/3;
-  background: #333;
-  border-radius: 1rem;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectItem:hover .projectImage {
+  transform: scale(1.05);
 }
 
 .projectDescription {
   flex: 1;
+  padding: 2rem;
 }
 
-/* Responsive text size for project description */
-@media (min-width: 768px) {
-.projectDescription {
-  font-size: 1rem; /* md: text size */
-}
-}
-
-@media (min-width: 1024px) {
-.projectDescription {
-  font-size: 1.2rem; /* lg: text size */
-}
+.projectTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media (min-width: 1280px) {
-.projectDescription {
-  font-size: 1.3rem; /* xl: text size */
+.projectTeam {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
+
+.projectText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dddddd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .projectItem {
+    flex-direction: column !important;
+    gap: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 300px;
+  }
+
+  .projectDescription {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .imageContainer {
+    height: 500px;
+  }
+
+  .projectTitle {
+    font-size: 2.5rem;
+  }
+
+  .projectText {
+    font-size: 1.25rem;
+  }
 }

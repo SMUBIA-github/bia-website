@@ -68,7 +68,7 @@ const Page: React.FC = () => {
       {/* Section 1: Cat image and Text */}
       <div className={styles['section1']}>
         <div className={styles['catimg-container']}>
-          <Image src='/images/BIAMASCOT.png' alt="BIAMascot" className={styles.catimg} width={500} height={500} />
+          <Image src='/images/biaMascot.png' alt="BIAMascot" className={styles.catimg} width={500} height={500} />
         </div>
         <div className={styles['text-container']}>
           <div className={styles.header}>
@@ -82,42 +82,72 @@ const Page: React.FC = () => {
 
       {/* Wordcards Section */}
       <div className={styles["section1-cards"]}>
-        <motion.div
-          ref={workshopRef}
-          initial={{ y: 50, opacity: 0 }}
-          animate={workshopControls}
-          className={styles.wordcard}
-        >
-          <Wordcard
-            title="Data Handling"
-            imageSrc="/images/SQLSCREEN.png"
-            overlayContent="Insert description here."
-          />
-        </motion.div>
-        <motion.div
-          ref={workshopRef}
-          initial={{ y: 50, opacity: 0 }}
-          animate={workshopControls}
-          className={styles.wordcard}
-        >
-          <Wordcard
-            title="Data Visualisation"
-            imageSrc="/images/SQLSCREEN.png"
-            overlayContent="Insert description here."
-          />
-        </motion.div>
-        <motion.div
-          ref={workshopRef}
-          initial={{ y: 50, opacity: 0 }}
-          animate={workshopControls}
-          className={styles.wordcard}
-        >
-          <Wordcard
-            title="Data Science"
-            imageSrc="/images/SQLSCREEN.png"
-            overlayContent="Insert description here."
-          />
-        </motion.div>
+      <motion.div
+  ref={workshopRef}
+  initial={{ y: 50, opacity: 0 }}
+  animate={workshopControls}
+  className={styles.wordcard}
+>
+  <Wordcard
+    title="Data Handling"
+    imageSrc="/images/SQLSCREEN.png"
+    overlayContent={
+      <div className={styles['modal-text']}>
+        <ul>
+          <li><strong>Learn data handling software</strong> such as MySQL, Pandas, and Excel.</li>
+          <li><strong>Master data manipulation</strong> techniques.</li>
+          <li>Lay the groundwork for <strong>data visualisation</strong>.</li>
+        </ul>
+      </div>
+    }
+  />
+</motion.div>
+
+<motion.div
+  ref={workshopRef}
+  initial={{ y: 50, opacity: 0 }}
+  animate={workshopControls}
+  className={styles.wordcard}
+>
+  <Wordcard
+    title="Data Visualisation"
+    imageSrc="/images/dataVis.png"
+    overlayContent={
+      <div className={styles['modal-text']} >
+        <ul>
+          <li><strong>Learn the importance of data visualisation</strong> in making sense of large datasets.</li>
+          <li><strong>Explore graphical representations</strong> of data using charts, graphs, and maps.</li>
+          <li>Gain hands-on experience with visualization tools and techniques.</li>
+          <li><strong>Make data-driven decisions</strong> using the insights derived from visualizations.</li>
+        </ul>
+      </div>
+    }
+  />
+</motion.div>
+
+<motion.div
+  ref={workshopRef}
+  initial={{ y: 50, opacity: 0 }}
+  animate={workshopControls}
+  className={styles.wordcard}
+>
+  <Wordcard
+    title="Data Science"
+    imageSrc="/images/dataScience.png"
+    overlayContent={
+      <div className={styles['modal-text']}>
+        <ul>
+          <li><strong>Learn the intuition behind AI and Machine Learning</strong>.</li>
+          <li>Understand how artificial intelligence makes predictions using data.</li>
+          <li>This is a primer for BIA&apos;s <strong>Data Associate Programme</strong>.</li>
+          <li>Dive deeper into the technical aspects of <strong>Machine Learning</strong>.</li>
+        </ul>
+      </div>
+    }
+  />
+</motion.div>
+
+
       </div>
 
       <Divider />

@@ -1,4 +1,3 @@
-// Wordcard.tsx
 "use client";
 import React, { useState } from 'react';
 import CustomModal from './CustomModal';
@@ -7,7 +6,7 @@ import styles from './Wordcard.module.css';
 interface WordCardProps {
   title: string;
   imageSrc: string;
-  overlayContent: string;
+  overlayContent: React.ReactNode;
   className?: string;
 }
 
