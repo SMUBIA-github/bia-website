@@ -186,7 +186,6 @@ const DAP: React.FC = () => {
               {/* Use the regular <img> tag for the GIF */}
               <video
                 src="https://thisisformygif2.s3.ap-southeast-1.amazonaws.com/Lyrics-Machine.gif.mp4"
-                alt="Lyrics Machine"
                 className={styles.projectImage}
                 autoPlay
                 loop
