@@ -9,6 +9,7 @@ import LinkedInSection from "./components/linkedin";
 import Link from "next/link";
 import React, { useState, useEffect, ReactNode } from "react";
 
+
 interface ScrollRevealProps {
   children: ReactNode;
   threshold?: number;
@@ -74,6 +75,7 @@ export default function Home() {
           </video>
         )}
       </div>
+
 
       <div className={styles.whowearecontainer}>
         <div className={styles.contentContainer}>

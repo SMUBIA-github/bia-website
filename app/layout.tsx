@@ -10,6 +10,8 @@ import SocialDots from "./components/socialmedia";
 import LoadingScreen from "./components/loadingscreen";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // const geistSans = localFont({
 //   src: "./fonts/Inter.ttf",
@@ -45,6 +47,8 @@ export default function RootLayout({
         <LoadingScreen />
         <Navbar />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <div id="portal"></div>
         <FooterBar />
         <div className="indexup">
