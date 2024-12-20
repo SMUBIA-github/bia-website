@@ -134,7 +134,6 @@
 /* Highlights Section */
 .highlightsSection {
   padding: 6rem 2rem;
-  background: linear-gradient(to bottom, #000000, #111111);
 }
 
 .highlightsTitle {
@@ -178,7 +177,7 @@
 }
 
 .highlightsTitle::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1.5rem; /* Slightly increased to match larger text */
   left: 50%;

@@ -19,7 +19,7 @@ const Timeline = ({ events }: { events: Event[] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-<div className="relative w-full min-h-screen bg-black flex flex-col items-center px-4 md:px-8">
+<div className="relative w-full min-h-screen flex flex-col items-center px-4 md:px-8">
   {/* Content Container */}
   <div className="relative w-full max-w-[2400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 flex flex-col items-center">
     <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-white mt-8 mb-4">
