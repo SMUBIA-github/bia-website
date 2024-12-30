@@ -93,7 +93,11 @@ const Navbar = () => {
                       </Link>
                     </DropdownItem>
                     <DropdownItem>
-                      <Link href="/Datathon" className={styles.NavLink}>
+                      <Link
+                        href="https://datathon.smubia.com"
+                        target="_blank"
+                        className={styles.NavLink}
+                      >
                         Datathon
                       </Link>
                     </DropdownItem>
