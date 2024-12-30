@@ -18,11 +18,11 @@ const AlumniTestimonials = () => {
         "https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/gigi3-DYIV83HGA7dhcL3KNN70Azz9stUjbA.jpg",
     },
     {
-      name: "Brejesh",
-      title: "DAP Member",
-      text: "SMUBIA has allowed me to explore my interest in data analytics while building meaningful relationships with peers, offering opportunities to learn in a community of like-minded individuals.",
+      name: "Aryan Khera",
+      title: "Assurance Associate",
+      text: "SMU's Business Intelligence & Analytics program offered a perfect blend of theoretical knowledge and practical experience, allowing me to apply data science techniques to real-world problems.",
       imgSrc:
-        "https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/brejesh-IsVFe8Ltl1WZ4tHBBl7ff9hMArU9UF.jpg",
+        "https://ssvs8thfuktvqsqk.public.blob.vercel-storage.com/aryan3-FmkPn0Ey0i2lt1QVPbbbW4eNFusXn5.jpg",
     },
   ];
 
